@@ -1,0 +1,545 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#141110">
+<title>Brightwit College — Concept 3</title>
+<meta name="description" content="Brightwit College of Professional Studies, Ngong Road, Nairobi. Design concept 3.">
+<link rel="icon" href="data:,">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap">
+<style>
+/* Layout concept: a dark, photographic atelier. Espresso ground, ivory type, brass hairlines and a seal monogram. Full-bleed imagery, high-contrast serif headlines, generous space. Premium without being cold. */
+:root{
+  --espresso:#141110; --surface:#1d1917; --surface-2:#272220;
+  --ivory:#f3ece2; --stone:#a89e92; --mute:#7a7169;
+  --brass:#c9a24b; --brass-soft:#e6cd84; --line:rgba(243,236,226,.13);
+  --font-display:"Cormorant Garamond","Garamond","Georgia",serif;
+  --font-body:"Jost","Futura","Segoe UI","Helvetica Neue",Arial,sans-serif;
+  --gl:max(16px, env(safe-area-inset-left, 0px));
+  --gr:max(16px, env(safe-area-inset-right, 0px));
+  --wrap:1240px;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--espresso);color:var(--ivory);font-family:var(--font-body);font-size:16px;line-height:1.6;font-weight:300;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--espresso)}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+h1,h2,h3,h4{font-family:var(--font-display);font-weight:500;line-height:1.02;margin:0;text-wrap:balance;letter-spacing:-.005em}
+p{margin:0}
+.wrap{max-width:var(--wrap);margin-inline:auto;padding-left:var(--gl);padding-right:var(--gr)}
+.eyebrow{font-size:11.5px;font-weight:500;letter-spacing:.28em;text-transform:uppercase;color:var(--brass);display:flex;align-items:center;gap:14px}
+.eyebrow::before{content:"";width:28px;height:1px;background:var(--brass)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;padding:16px 28px;font-weight:500;font-size:13px;letter-spacing:.18em;text-transform:uppercase;border:1px solid var(--ivory);color:var(--ivory);background:transparent;cursor:pointer;font-family:inherit;transition:background .25s,color .25s,border-color .25s}
+.btn:hover{background:var(--ivory);color:var(--espresso)}
+.btn-brass{background:var(--brass);border-color:var(--brass);color:var(--espresso)}
+.btn-brass:hover{background:var(--brass-soft);border-color:var(--brass-soft);color:var(--espresso)}
+.btn-dark{border-color:var(--espresso);color:var(--espresso)}
+.btn-dark:hover{background:var(--espresso);color:var(--ivory)}
+:focus-visible{outline:2px solid var(--brass);outline-offset:4px}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;scroll-behavior:auto}}
+
+/* header */
+.header{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:rgba(20,17,16,.72);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.header .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px;min-height:86px}
+.brand{display:flex;align-items:center;gap:14px}
+.brand .seal{width:52px;height:52px;flex:none}
+.brand .name{font-family:var(--font-body);font-weight:500;font-size:15px;letter-spacing:.3em;text-transform:uppercase;line-height:1}
+.brand .sub{display:block;font-family:var(--font-display);font-style:italic;font-size:15px;color:var(--stone);margin-top:5px;letter-spacing:.01em;text-transform:none}
+.nav{display:flex;gap:30px;align-items:center;font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;font-weight:400}
+.nav a{position:relative;padding:6px 0;color:var(--ivory)}
+.nav a::after{content:"";position:absolute;left:0;right:100%;bottom:0;height:1px;background:var(--brass);transition:right .25s}
+.nav a:hover::after{right:0}
+.nav .btn{display:none}
+.hcta{display:flex;gap:12px;align-items:center}
+.hcta .btn{padding:12px 20px;font-size:12px}
+.menu-btn{display:none;width:44px;height:44px;border:1px solid var(--line);background:transparent;cursor:pointer;align-items:center;justify-content:center}
+.menu-btn span{display:block;width:20px;height:1px;background:var(--ivory);box-shadow:0 -6px 0 var(--ivory),0 6px 0 var(--ivory)}
+@media(max-width:1000px){
+  .nav{display:none}
+  .hcta .btn{display:none}
+  .menu-btn{display:flex}
+  .nav.open{display:flex;flex-direction:column;align-items:stretch;gap:0;position:absolute;left:0;right:0;top:100%;background:var(--espresso);border-bottom:1px solid var(--line);padding:8px var(--gr) 20px var(--gl)}
+  .nav.open a{padding:16px 0;border-bottom:1px solid var(--line);font-size:14px}
+  .nav.open a::after{display:none}
+  .nav.open .btn{display:inline-flex;margin-top:16px;border-bottom:1px solid var(--brass)}
+}
+
+/* hero */
+.hero{position:relative;min-height:640px;display:grid;align-items:end;overflow:hidden;border-bottom:1px solid var(--line)}
+.hero .bg{position:absolute;inset:0}
+.hero .bg img{width:100%;height:100%;object-fit:cover;object-position:68% 30%}
+.hero .bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,17,16,.25) 0%,rgba(20,17,16,.35) 40%,rgba(20,17,16,.92) 100%),linear-gradient(90deg,rgba(20,17,16,.75) 0%,rgba(20,17,16,.1) 60%)}
+.hero .wrap{position:relative;padding-block:120px 56px;display:grid;grid-template-columns:minmax(0,760px) 1fr;gap:32px}
+.hero h1{font-size:clamp(50px,7vw,104px);margin-top:26px;line-height:.98}
+.hero h1 em{font-style:italic;font-weight:400;color:var(--brass-soft)}
+.hero .lead{font-size:18px;color:#d9d0c4;max-width:50ch;margin-top:26px;line-height:1.65}
+.hero .actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:36px}
+.hero .meta{margin-top:48px;display:flex;flex-wrap:wrap;gap:12px 36px;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--stone);border-top:1px solid var(--line);padding-top:20px}
+.hero .meta b{color:var(--ivory);font-weight:500}
+.hero .side{align-self:end;justify-self:end;text-align:right;color:var(--stone);font-family:var(--font-display);font-style:italic;font-size:20px;max-width:22ch;line-height:1.3}
+.hero .side b{display:block;font-style:normal;font-family:var(--font-body);font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--brass);margin-bottom:8px;font-weight:500}
+@media(max-width:900px){.hero{min-height:560px}.hero .wrap{grid-template-columns:1fr;padding-block:88px 40px}.hero .side{display:none}.hero .bg img{object-position:62% 20%}}
+
+/* numbers */
+.numbers .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:0;padding-block:44px;border-bottom:1px solid var(--line)}
+.num{padding:8px 28px 8px 0;border-right:1px solid var(--line);margin-right:28px}
+.num:last-child{border-right:0;margin-right:0}
+.num b{display:block;font-family:var(--font-display);font-weight:500;font-size:56px;line-height:1;color:var(--brass-soft);font-variant-numeric:tabular-nums}
+.num span{display:block;margin-top:10px;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--stone)}
+@media(max-width:800px){.numbers .wrap{grid-template-columns:1fr 1fr;gap:28px 0}.num:nth-child(2){border-right:0;margin-right:0}.num b{font-size:44px}}
+
+/* sections */
+.section{padding-block:104px}
+.section-head{display:grid;grid-template-columns:1fr auto;gap:24px;align-items:end;margin-bottom:52px}
+.section-head h2{font-size:clamp(40px,4.6vw,66px);margin-top:20px;max-width:16ch}
+.section-head p{color:var(--stone);max-width:46ch;margin-top:16px;font-size:17px}
+.section-head .link{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--brass);border-bottom:1px solid var(--brass);padding-bottom:6px;white-space:nowrap}
+@media(max-width:700px){.section{padding-block:72px}.section-head{grid-template-columns:1fr}}
+
+/* programmes */
+.panels{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.panel{position:relative;aspect-ratio:3/4;max-width:100%;overflow:hidden;background:var(--surface);display:flex;align-items:flex-end;isolation:isolate}
+.panel img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .8s ease;z-index:-1}
+.panel:hover img{transform:scale(1.06)}
+.panel::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,17,16,0) 35%,rgba(20,17,16,.92) 100%);z-index:0}
+.panel .in{position:relative;padding:30px 28px;display:flex;flex-direction:column;gap:12px;width:100%}
+.panel .roman{font-family:var(--font-display);font-style:italic;color:var(--brass-soft);font-size:22px}
+.panel h3{font-size:40px;line-height:1}
+.panel p{color:#d9d0c4;font-size:15px;max-height:0;opacity:0;overflow:hidden;transition:max-height .5s,opacity .5s,margin .5s}
+.panel:hover p,.panel:focus-within p{max-height:120px;opacity:1}
+.panel .spec{display:flex;flex-wrap:wrap;gap:8px 20px;font-size:11.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--stone);border-top:1px solid var(--line);padding-top:14px}
+.panel .spec b{color:var(--ivory);font-weight:500}
+.panel .go{position:absolute;top:24px;right:24px;width:44px;height:44px;border:1px solid rgba(243,236,226,.5);border-radius:50%;display:grid;place-items:center;color:var(--ivory);transition:background .25s,color .25s}
+.panel:hover .go{background:var(--brass);border-color:var(--brass);color:var(--espresso)}
+.panel .go svg{width:18px;height:18px}
+@media(max-width:900px){.panels{grid-template-columns:1fr}.panel{aspect-ratio:4/3}.panel p{max-height:none;opacity:1}}
+
+/* about */
+.about{background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.about .wrap{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center}
+.about h2{font-size:clamp(40px,4.4vw,62px);margin-top:20px}
+.about .big{font-family:var(--font-display);font-size:26px;line-height:1.35;color:#e9e0d3;margin-top:28px;font-weight:500}
+.about .big::first-letter{font-size:3.6em;float:left;line-height:.8;padding:6px 10px 0 0;color:var(--brass-soft)}
+.about .copy{color:var(--stone);margin-top:22px;max-width:56ch;font-size:16px}
+.about dl{display:grid;grid-template-columns:auto 1fr;gap:12px 24px;margin:32px 0 0;padding-top:24px;border-top:1px solid var(--line);font-size:14px}
+.about dt{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--brass);padding-top:3px}
+.about dd{margin:0;color:var(--ivory)}
+.about .frames{position:relative;padding:0 0 40px 40px}
+.about .frames .main{aspect-ratio:3/4;max-width:100%;overflow:hidden;position:relative;z-index:1}
+.about .frames .main img{width:100%;height:100%;object-fit:cover}
+.about .frames .small{position:absolute;left:0;bottom:0;width:48%;aspect-ratio:1;max-width:100%;overflow:hidden;z-index:2;border:6px solid var(--surface)}
+.about .frames .small img{width:100%;height:100%;object-fit:cover}
+.about .frames::before{content:"";position:absolute;right:-18px;top:-18px;width:60%;height:60%;border:1px solid var(--brass);z-index:0}
+@media(max-width:900px){.about .wrap{grid-template-columns:1fr;gap:48px}}
+
+/* admissions */
+.adm .wrap{display:grid;grid-template-columns:1.2fr 1fr;gap:72px;align-items:start}
+.timeline{margin-top:36px;position:relative;padding-left:48px}
+.timeline::before{content:"";position:absolute;left:11px;top:8px;bottom:8px;width:1px;background:var(--line)}
+.tstep{position:relative;padding-bottom:40px}
+.tstep:last-child{padding-bottom:0}
+.tstep::before{content:"";position:absolute;left:-44px;top:8px;width:9px;height:9px;border-radius:50%;background:var(--brass);box-shadow:0 0 0 5px var(--espresso)}
+.tstep .roman{font-family:var(--font-display);font-style:italic;color:var(--brass-soft);font-size:18px;letter-spacing:.06em}
+.tstep h3{font-size:30px;margin-top:4px}
+.tstep p{color:var(--stone);margin-top:8px;max-width:50ch;font-size:15.5px}
+.card{background:var(--surface);border:1px solid var(--line)}
+.card header{padding:26px 30px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap}
+.card header h3{font-size:32px}
+.card header span{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--brass)}
+.card ul{list-style:none;margin:0;padding:10px 30px}
+.card li{display:flex;justify-content:space-between;gap:16px;padding:14px 0;border-bottom:1px solid var(--line);font-size:15px}
+.card li:last-child{border-bottom:0}
+.card li b{font-weight:500;font-variant-numeric:tabular-nums;white-space:nowrap;color:var(--brass-soft)}
+.card .req{padding:22px 30px;border-top:1px solid var(--line);background:var(--surface-2)}
+.card .req h4{font-family:var(--font-body);font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--stone);margin-bottom:8px;font-weight:500}
+.card .req ul{padding:0}
+.card .req li{padding:8px 0;border:0;justify-content:flex-start;gap:12px;font-size:14.5px}
+.card .req li::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--brass);flex:none;margin-top:9px}
+.card .foot{padding:22px 30px;border-top:1px solid var(--line)}
+.card .foot .btn{width:100%}
+@media(max-width:900px){.adm .wrap{grid-template-columns:1fr;gap:48px}.tstep h3{font-size:26px}}
+
+/* gallery */
+.masonry{columns:3;column-gap:16px}
+.masonry figure{margin:0 0 16px;break-inside:avoid;position:relative;overflow:hidden}
+.masonry img{width:100%;height:auto;transition:transform .7s}
+.masonry figure:hover img{transform:scale(1.04)}
+.masonry figcaption{position:absolute;left:0;bottom:0;right:0;padding:40px 16px 12px;background:linear-gradient(180deg,rgba(20,17,16,0),rgba(20,17,16,.85));font-family:var(--font-display);font-style:italic;font-size:17px;color:var(--ivory)}
+@media(max-width:800px){.masonry{columns:2}}
+
+/* quotes */
+.quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.q{padding:44px 36px 44px 0;border-right:1px solid var(--line);margin-right:36px;display:flex;flex-direction:column;gap:22px}
+.q:last-child{border-right:0;margin-right:0}
+.q .mark{font-family:var(--font-display);font-size:72px;line-height:.6;color:var(--brass);height:30px}
+.q p{font-family:var(--font-display);font-size:24px;line-height:1.3;color:#e9e0d3}
+.q footer{display:flex;gap:14px;align-items:center;margin-top:auto}
+.q footer img{width:46px;height:46px;border-radius:50%;object-fit:cover;border:1px solid var(--brass)}
+.q footer b{display:block;font-weight:500;font-size:14px;letter-spacing:.06em}
+.q footer span{font-size:13px;color:var(--stone)}
+@media(max-width:900px){.quotes{grid-template-columns:1fr}.q{border-right:0;margin-right:0;border-bottom:1px solid var(--line);padding:36px 0}.q:last-child{border-bottom:0}}
+
+/* news */
+.news-list{border-top:1px solid var(--line)}
+.news{display:grid;grid-template-columns:150px 1fr auto;gap:28px;align-items:center;padding:30px 0;border-bottom:1px solid var(--line);transition:padding-left .25s}
+.news:hover{padding-left:12px}
+.news .date{font-family:var(--font-display);font-size:30px;line-height:1;color:var(--brass-soft)}
+.news .date small{display:block;font-family:var(--font-body);font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--stone);margin-top:6px}
+.news h3{font-size:28px}
+.news p{color:var(--stone);margin-top:6px;font-size:15px;max-width:60ch}
+.news .arrow{width:44px;height:44px;border:1px solid var(--line);border-radius:50%;display:grid;place-items:center;transition:background .25s,color .25s}
+.news:hover .arrow{background:var(--brass);color:var(--espresso);border-color:var(--brass)}
+.news .arrow svg{width:18px;height:18px}
+@media(max-width:700px){.news{grid-template-columns:1fr;gap:12px}.news .arrow{display:none}}
+
+/* cta */
+.cta{background:var(--ivory);color:var(--espresso)}
+.cta .wrap{display:grid;grid-template-columns:1fr auto;gap:36px;align-items:center;padding-block:88px}
+.cta .eyebrow{color:#8b6b1f}.cta .eyebrow::before{background:#8b6b1f}
+.cta h2{font-size:clamp(40px,5vw,72px);margin-top:18px;max-width:14ch}
+.cta h2 em{font-style:italic;font-weight:400}
+.cta p{color:#5b534b;margin-top:16px;max-width:48ch;font-size:17px}
+.cta .actions{display:flex;gap:14px;flex-wrap:wrap}
+@media(max-width:800px){.cta .wrap{grid-template-columns:1fr;padding-block:64px}}
+
+/* footer */
+.footer{font-size:14.5px;color:var(--stone)}
+.footer .wrap{display:grid;grid-template-columns:2fr 1fr 1fr 1.5fr;gap:40px;padding-block:72px 40px}
+.footer h4{font-family:var(--font-body);color:var(--brass);font-size:11px;letter-spacing:.24em;text-transform:uppercase;margin-bottom:18px;font-weight:500}
+.footer ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px}
+.footer a:hover{color:var(--ivory)}
+.footer .about-txt{margin-top:20px;max-width:40ch}
+.footer .legal{border-top:1px solid var(--line)}
+.footer .legal .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;padding-block:22px;font-size:12px;letter-spacing:.1em;text-transform:uppercase}
+@media(max-width:900px){.footer .wrap{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.footer .wrap{grid-template-columns:1fr;gap:28px}}
+
+.concept-bar{position:fixed;right:max(16px,env(safe-area-inset-right,0px));bottom:max(16px,env(safe-area-inset-bottom,0px));z-index:70;background:var(--ivory);color:var(--espresso);font-size:12px;letter-spacing:.06em;display:flex;align-items:center;gap:12px;padding:8px 8px 8px 16px;box-shadow:0 10px 30px -10px rgba(0,0,0,.6)}
+.concept-bar b{color:#8b6b1f;font-weight:600}
+.concept-bar a{background:var(--espresso);color:var(--ivory);padding:8px 12px;font-weight:500;text-transform:uppercase;letter-spacing:.12em;font-size:11px}
+@media(max-width:560px){.concept-bar span.l{display:none}}
+
+/* ---- motion & micro-interactions ---- */
+.header{transition:background .35s,transform .45s cubic-bezier(.2,.7,.2,1)}
+.header.is-scrolled{background:rgba(20,17,16,.94)}
+.header.is-hidden{transform:translateY(-100%)}
+.btn{position:relative;overflow:hidden;isolation:isolate;transition:color .3s,border-color .3s,transform .15s}
+.btn::before{content:"";position:absolute;inset:0;background:var(--ivory);transform:translateY(101%);transition:transform .4s cubic-bezier(.2,.7,.2,1);z-index:-1}
+.btn:hover{background:transparent;color:var(--espresso)}
+.btn:hover::before{transform:translateY(0)}
+.btn:active{transform:scale(.98)}
+.btn-brass::before{background:var(--brass-soft)}
+.btn-brass:hover{background:var(--brass)}
+.btn-dark::before{background:var(--espresso)}
+.btn-dark:hover{background:transparent;color:var(--ivory)}
+.hero .bg img{will-change:transform;transform-origin:60% 35%}
+.panel .roman{display:inline-block;transition:transform .4s}
+.panel:hover .roman{transform:translateX(8px)}
+.motion-on .timeline::before{transform-origin:top;transform:scaleY(var(--draw,1))}
+.motion-on .tstep::before{background:#3b342f;transition:background .4s,box-shadow .4s}
+.motion-on .tstep.is-past::before{background:var(--brass);box-shadow:0 0 0 5px var(--espresso),0 0 16px rgba(201,162,75,.55)}
+.news .arrow svg{transition:transform .3s}
+.news:hover .arrow svg{transform:translateX(4px)}
+.about .frames .small{transition:transform .4s}
+.about .frames:hover .small{transform:translate(-6px,-6px)}
+.masonry figure{will-change:clip-path}
+.q{transition:transform .3s}
+.q:hover{transform:translateY(-4px)}
+.num b{display:inline-block;transition:color .3s}
+.num:hover b{color:var(--ivory)}
+.concept-bar a:first-child{background:none;color:var(--espresso);padding:0;font-weight:500;text-transform:none;letter-spacing:.06em;font-size:12px}
+.concept-bar a:first-child:hover{color:#8b6b1f}
+</style>
+</head>
+<body>
+
+
+<header class="header">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Brightwit College home">
+      <svg class="seal" viewBox="0 0 52 52" aria-hidden="true">
+        <circle cx="26" cy="26" r="25" fill="none" stroke="#c9a24b" stroke-width="1"/>
+        <circle cx="26" cy="26" r="21.5" fill="none" stroke="#c9a24b" stroke-width=".6"/>
+        <text x="26" y="33.5" text-anchor="middle" font-family="Cormorant Garamond, Garamond, Georgia, serif" font-size="22" font-weight="600" fill="#f3ece2" letter-spacing="-1">BW</text>
+        <circle cx="26" cy="7.5" r="1" fill="#c9a24b"/><circle cx="26" cy="44.5" r="1" fill="#c9a24b"/>
+      </svg>
+      <span><span class="name">Brightwit</span><span class="sub">College of Professional Studies</span></span>
+    </a>
+    <nav class="nav" id="nav" aria-label="Primary">
+      <a href="#programmes">Programmes</a>
+      <a href="#about">The college</a>
+      <a href="#admissions">Admissions</a>
+      <a href="#gallery">Campus</a>
+      <a href="#news">Journal</a>
+      <a href="#contact">Contact</a>
+      <a class="btn btn-brass" href="#admissions">Apply</a>
+    </nav>
+    <div class="hcta">
+      <a class="btn btn-brass" href="#admissions">Apply now</a>
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="nav"><span></span></button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="bg"><img src="../img/beauty-afro-red.jpg" alt="A Brightwit beauty student with finished editorial makeup" width="1400" height="2100" fetchpriority="high"></div>
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">Nairobi · Est. 2018 · TVETA-registered</div>
+      <h1>Master a craft. <em>Earn your place.</em></h1>
+      <p class="lead">Brightwit College of Professional Studies trains Beauty &amp; Cosmetology, Professional Driving and Barista &amp; Coffee Arts to a professional standard, in small classes led by people who still practise the trade.</p>
+      <div class="actions">
+        <a class="btn btn-brass" href="#admissions">Apply for January 2027</a>
+        <a class="btn" href="#programmes">The programmes</a>
+      </div>
+      <div class="meta"><span><b>Open Day</b> 15 Nov 2026</span><span><b>Deadline</b> 5 Dec 2026</span><span><b>Classes begin</b> 12 Jan 2027</span></div>
+    </div>
+    <div class="side"><b>Featured</b>Beauty &amp; Cosmetology: editorial makeup, taught on real faces.</div>
+  </div>
+</section>
+
+<section class="numbers" aria-label="College in numbers">
+  <div class="wrap">
+    <div class="num"><b>2018</b><span>Established</span></div>
+    <div class="num"><b>3</b><span>Certificate programmes</span></div>
+    <div class="num"><b>2,500+</b><span>Graduates</span></div>
+    <div class="num"><b>92%</b><span>Placement rate</span></div>
+  </div>
+</section>
+
+<section class="section" id="programmes">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow">Programmes</div>
+        <h2>Three crafts, taught properly</h2>
+      </div>
+      <a class="link" href="#admissions">Fees &amp; intakes</a>
+    </div>
+    <div class="panels">
+      <a class="panel" href="#admissions">
+        <img src="../img/beauty-glam-03.jpg" alt="A model with precise, professional makeup" loading="lazy">
+        <span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17L17 7M9 7h8v8"/></svg></span>
+        <div class="in">
+          <span class="roman">I</span>
+          <h3>Beauty &amp; Cosmetology</h3>
+          <p>Makeup artistry, skincare and salon practice with real clients in our training salon.</p>
+          <div class="spec"><span><b>4 months</b></span><span><b>KSh 45,000</b></span><span>Certificate</span></div>
+        </div>
+      </a>
+      <a class="panel" href="#admissions">
+        <img src="../img/driving-man-steering.jpg" alt="A driver's hands on the steering wheel" loading="lazy">
+        <span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17L17 7M9 7h8v8"/></svg></span>
+        <div class="in">
+          <span class="roman">II</span>
+          <h3>Professional Driving</h3>
+          <p>Weekday and weekend classes that make you a confident, defensive driver on Nairobi roads.</p>
+          <div class="spec"><span><b>3 months</b></span><span><b>KSh 24,000</b></span><span>Certificate</span></div>
+        </div>
+      </a>
+      <a class="panel" href="#admissions">
+        <img src="../img/barista-latte-hand.jpg" alt="A barista presents a latte with rosetta art" loading="lazy">
+        <span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17L17 7M9 7h8v8"/></svg></span>
+        <div class="in">
+          <span class="roman">III</span>
+          <h3>Barista &amp; Coffee Arts</h3>
+          <p>Espresso, milk texturing and latte art on commercial machines, for cafés, hotels and specialty coffee.</p>
+          <div class="spec"><span><b>4 months</b></span><span><b>KSh 32,000</b></span><span>Certificate</span></div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="section about" id="about">
+  <div class="wrap">
+    <div class="frames">
+      <div class="main"><img src="../img/campus-classroom-beauty-session.jpg" alt="A beauty class in session at the Ngong Road campus" loading="lazy"></div>
+      <div class="small"><img src="../img/campus-students-duo-portrait.jpg" alt="Two Brightwit students in college T-shirts" loading="lazy"></div>
+    </div>
+    <div>
+      <div class="eyebrow">The college</div>
+      <h2>Registered. Practical. Personal.</h2>
+      <p class="big">Brightwit exists to make career-relevant, hands-on training accessible to every Kenyan. Classes are small, instructors are working professionals, and everything is practised until you can do it for real.</p>
+      <p class="copy">We are registered by the Technical and Vocational Education and Training Authority as a Vocational Training Centre under the TVET Act, Cap. 210A, and our driving programme follows the NTSA curriculum.</p>
+      <dl>
+        <dt>Registration</dt><dd>TVETA/PRIVATE/TVC/0138/2026</dd>
+        <dt>Campus</dt><dd>Kony House, Ngong Road, Ngong</dd>
+        <dt>Schedules</dt><dd>Morning · Evening · Weekend</dd>
+        <dt>Support</dt><dd>Attachments, placement and business guidance</dd>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<section class="section adm" id="admissions">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">Admissions</div>
+      <h2 style="font-size:clamp(40px,4.4vw,62px);margin-top:20px">How to apply</h2>
+      <div class="timeline">
+        <div class="tstep"><span class="roman">I</span><h3>Choose your programme</h3><p>Beauty, Driving or Barista. Our admissions team will help you match a programme to your goals and schedule.</p></div>
+        <div class="tstep"><span class="roman">II</span><h3>Submit your application</h3><p>Online or in person at Kony House. We confirm receipt within one working day.</p></div>
+        <div class="tstep"><span class="roman">III</span><h3>Interview and document check</h3><p>A short conversation with an admissions officer to confirm your programme and verify your documents.</p></div>
+        <div class="tstep"><span class="roman">IV</span><h3>Enrol and begin</h3><p>Choose your morning, evening or weekend class and start training in January.</p></div>
+      </div>
+    </div>
+    <aside class="card" aria-label="College calendar">
+      <header><h3>January 2027</h3><span>Applications open</span></header>
+      <ul>
+        <li><span>Open Day</span><b>15 Nov 2026</b></li>
+        <li><span>Application deadline</span><b>5 Dec 2026</b></li>
+        <li><span>Classes begin</span><b>12 Jan 2027</b></li>
+      </ul>
+      <div class="req">
+        <h4>What you will need</h4>
+        <ul><li>National ID or passport</li><li>Two passport-size photos</li><li>Previous certificates, if any</li><li>KSh 500 application fee</li></ul>
+      </div>
+      <div class="foot"><a class="btn btn-brass" href="#contact">Begin your application</a></div>
+    </aside>
+  </div>
+</section>
+
+<section class="section" id="gallery" style="padding-top:0">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow">Campus</div>
+        <h2>Inside the atelier</h2>
+      </div>
+      <a class="link" href="#gallery">Full gallery</a>
+    </div>
+    <div class="masonry">
+      <figure><img src="../img/campus-class-group-01.jpg" alt="Brightwit class group photo" loading="lazy"><figcaption>Beauty class, October 2026</figcaption></figure>
+      <figure><img src="../img/beauty-eye-closeup.jpg" alt="Close-up of finished eye makeup" loading="lazy"><figcaption>Precision work</figcaption></figure>
+      <figure><img src="../img/driving-woman-window.jpg" alt="A learner driver smiling from the car window" loading="lazy"><figcaption>Driving practical</figcaption></figure>
+      <figure><img src="../img/campus-makeup-practice-desk.jpg" alt="Makeup practice at the desk" loading="lazy"><figcaption>Makeup practical</figcaption></figure>
+      <figure><img src="../img/barista-pour-dark.jpg" alt="A barista pours milk into a latte" loading="lazy"><figcaption>The coffee lab</figcaption></figure>
+      <figure><img src="../img/campus-class-group-03.jpg" alt="Students and trainer in the classroom" loading="lazy"><figcaption>Trainers and students</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow">Alumni</div>
+        <h2>In their words</h2>
+      </div>
+    </div>
+    <div class="quotes">
+      <blockquote class="q"><span class="mark">“</span><p>The practical salon training made all the difference. I walked into my first job at a Westlands salon two weeks after graduation.</p><footer><img src="../img/portrait-woman-02.jpg" alt=""><span><b>Wanjiru M.</b><span>Beauty &amp; Cosmetology, 2025</span></span></footer></blockquote>
+      <blockquote class="q"><span class="mark">“</span><p>My instructor pushed me to drive properly, not just pass. The defensive driving sessions gave me confidence on Nairobi roads.</p><footer><img src="../img/portrait-man-01.jpg" alt=""><span><b>Collins O.</b><span>Professional Driving, 2024</span></span></footer></blockquote>
+      <blockquote class="q"><span class="mark">“</span><p>From espresso basics to latte art, everything was hands-on. I now work as a head barista in a specialty coffee shop in the city centre.</p><footer><img src="../img/portrait-woman-01.jpg" alt=""><span><b>Amina H.</b><span>Barista &amp; Coffee Arts, 2025</span></span></footer></blockquote>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="news" style="padding-top:0">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow">Journal</div>
+        <h2>News &amp; events</h2>
+      </div>
+      <a class="link" href="#news">All entries</a>
+    </div>
+    <div class="news-list">
+      <a class="news" href="#news"><div class="date">15 Nov<small>2026 · Event</small></div><div><h3>Brightwit Open Day</h3><p>Tour the campus, meet the trainers and try your hand at a makeup look, latte art and a driving simulation.</p></div><span class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+      <a class="news" href="#news"><div class="date">5 Dec<small>2026 · News</small></div><div><h3>Early-bird discount closes</h3><p>Apply before 5 December 2026 and save on your enrolment for the January intake.</p></div><span class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+      <a class="news" href="#news"><div class="date">12 Jan<small>2027 · News</small></div><div><h3>January 2027 intake begins</h3><p>Classes for the new academic year start on 12 January 2027 for all three programmes.</p></div><span class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">January 2027 intake</div>
+      <h2>Applications are <em>now open.</em></h2>
+      <p>Small classes, hands-on training and a certificate that employers recognise. Places are limited in every stream.</p>
+    </div>
+    <div class="actions"><a class="btn btn-dark" href="#contact">Apply now</a><a class="btn btn-dark" href="#programmes">Browse programmes</a></div>
+  </div>
+</section>
+</main>
+
+<footer class="footer" id="contact">
+  <div class="wrap">
+    <div>
+      <div class="brand">
+        <svg class="seal" viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="25" fill="none" stroke="#c9a24b" stroke-width="1"/><circle cx="26" cy="26" r="21.5" fill="none" stroke="#c9a24b" stroke-width=".6"/><text x="26" y="33.5" text-anchor="middle" font-family="Cormorant Garamond, Garamond, Georgia, serif" font-size="22" font-weight="600" fill="#f3ece2" letter-spacing="-1">BW</text><circle cx="26" cy="7.5" r="1" fill="#c9a24b"/><circle cx="26" cy="44.5" r="1" fill="#c9a24b"/></svg>
+        <span><span class="name">Brightwit</span><span class="sub">College of Professional Studies</span></span>
+      </div>
+      <p class="about-txt">Hands-on, certified vocational training in Beauty &amp; Cosmetology, Professional Driving and Barista &amp; Coffee Arts.</p>
+    </div>
+    <div><h4>Programmes</h4><ul><li><a href="#programmes">Beauty &amp; Cosmetology</a></li><li><a href="#programmes">Professional Driving</a></li><li><a href="#programmes">Barista &amp; Coffee Arts</a></li></ul></div>
+    <div><h4>College</h4><ul><li><a href="#about">The college</a></li><li><a href="#admissions">Admissions</a></li><li><a href="#news">Journal</a></li><li><a href="#gallery">Campus</a></li></ul></div>
+    <div><h4>Admissions office</h4><ul><li>Kony House, Ngong Road, Ngong</li><li>P.O. Box 13597-00100, Nairobi</li><li>+254 715 798294 · +254 758 495577</li><li>admissions@brightwitcollege.co.ke</li><li>Mon–Sat, 8:00 AM – 5:00 PM</li></ul></div>
+  </div>
+  <div class="legal"><div class="wrap"><span>© 2026 Brightwit College of Professional Studies</span><span>TVETA/PRIVATE/TVC/0138/2026</span></div></div>
+</footer>
+
+<nav class="concept-bar" aria-label="Design concepts"><a href="../">All concepts</a><b>3 / 5</b><span class="l">Atelier</span><a class="nx" href="../concept-4/">Next concept</a></nav>
+<script>
+(function(){
+  var btn=document.getElementById('menuBtn'),nav=document.getElementById('nav');
+  btn.addEventListener('click',function(){var open=nav.classList.toggle('open');btn.setAttribute('aria-expanded',open?'true':'false');});
+  nav.addEventListener('click',function(e){if(e.target.tagName==='A'){nav.classList.remove('open');btn.setAttribute('aria-expanded','false');}});
+})();
+</script>
+
+
+<script src="../js/gsap.min.js"></script>
+<script src="../js/ScrollTrigger.min.js"></script>
+<script src="../js/lenis.min.js"></script>
+<script src="../js/motion.js"></script>
+<script>
+(function(){
+  BW.init({smooth:true, lerp:.08, anchorOffset:100});
+  BW.cursorGlow('rgba(201,162,75,.16)',620);
+  var header=document.querySelector('.header'); BW.header(header,{hide:true,at:80});
+  var h1=document.querySelector('.hero h1'); var words=BW.splitWords(h1);
+  var tl=BW.intro();
+  if(tl){
+    gsap.set(words,{opacity:0,filter:'blur(10px)',y:18});
+    gsap.set('.hero .eyebrow,.hero .lead,.hero .actions,.hero .meta,.hero .side',{opacity:0,y:12});
+    tl.from('.hero .bg img',{scale:1.18,duration:2.6,ease:'power2.out'},0)
+      .to('.hero .eyebrow',{opacity:1,y:0,duration:.6},.3)
+      .to(words,{opacity:1,filter:'blur(0px)',y:0,stagger:.08,duration:1.1},.4)
+      .to('.hero .lead,.hero .actions,.hero .meta,.hero .side',{opacity:1,y:0,duration:.8,stagger:.12},1.0);
+  }
+  var heroImg=document.querySelector('.hero .bg img'); heroImg.setAttribute('data-depth','0.008');
+  BW.mouseParallax(document.querySelector('.hero'),'.bg img');
+  BW.magnetic('.hero .btn-brass, .cta .btn',0.2);
+  BW.$('.num b').forEach(function(b){var t=b.textContent.trim(); if(t==='2,500+'){b.setAttribute('data-count','2500');b.setAttribute('data-suffix','+');} if(t==='92%'){b.setAttribute('data-count','92');b.setAttribute('data-suffix','%');}});
+  BW.counters('.num b[data-count]');
+  if(!BW.reduced){
+    gsap.to('.hero .bg img',{yPercent:16,ease:'none',scrollTrigger:{trigger:'.hero',start:'top top',end:'bottom top',scrub:true}});
+    gsap.from('.num',{y:20,opacity:0,stagger:.1,duration:.8,scrollTrigger:{trigger:'.numbers',start:'top 88%',once:true}});
+    gsap.from('.panel',{clipPath:'inset(100% 0 0 0)',stagger:.16,duration:1.2,ease:'power3.inOut',scrollTrigger:{trigger:'.panels',start:'top 80%',once:true},clearProps:'clipPath'});
+    document.querySelector('.about .frames .main').setAttribute('data-parallax','0.1');
+    document.querySelector('.about .frames .small').setAttribute('data-parallax','-0.18');
+    BW.parallax('.about [data-parallax]');
+    BW.reveal('.about .big, .about .copy, .about dl',{y:24,opacity:0},{stagger:.15});
+    gsap.fromTo('.timeline',{'--draw':0},{'--draw':1,ease:'none',scrollTrigger:{trigger:'.timeline',start:'top 70%',end:'bottom 55%',scrub:true}});
+    BW.$('.tstep').forEach(function(st){ScrollTrigger.create({trigger:st,start:'top 58%',toggleClass:{targets:st,className:'is-past'}});});
+    gsap.from('.card',{y:40,opacity:0,duration:1,scrollTrigger:{trigger:'.card',start:'top 85%',once:true}});
+    BW.wipe('.masonry figure','up');
+    BW.reveal('.q',{y:30,opacity:0},{stagger:.15});
+    gsap.from('.q .mark',{scale:0,transformOrigin:'0 100%',stagger:.15,duration:.7,ease:'back.out(2)',scrollTrigger:{trigger:'.quotes',start:'top 80%',once:true}});
+    BW.reveal('.news',{x:-30,opacity:0},{stagger:.1});
+    var ctaWords=BW.splitWords(document.querySelector('.cta h2'));
+    gsap.from(ctaWords,{yPercent:110,stagger:.06,duration:.9,scrollTrigger:{trigger:'.cta',start:'top 78%',once:true}});
+  }
+})();
+</script>
+</body>
+</html>
