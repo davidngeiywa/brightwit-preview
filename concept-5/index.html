@@ -1,0 +1,712 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#F7FAFF">
+<title>Brightwit College — Concept 5</title>
+<meta name="description" content="Brightwit College of Professional Studies, Ngong Road, Nairobi. Design concept 5.">
+<link rel="icon" href="data:,">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700&family=Hanken+Grotesk:wght@400;500;600&display=swap">
+<style>
+/* Anga. Cloud-white ground, deep blue ink, sky blue, one lime highlight. Arch-topped photo frames; a sticky programme story. */
+:root{
+  --edge:max(var(--gl),calc((100vw - var(--wrap)) / 2));
+  --cloud:#F7FAFF; --white:#FFFFFF; --ink:#0B2A6B; --sky:#3A9BF2; --lime:#D6F25A; --lime-deep:#C2E23A; --tint:#E3EFFD;
+  --text:#1F3159; --muted:#5A6A8C; --faint:#B5C1D8; --line:#D8E3F4;
+  --display:"Sora","Avenir Next","Segoe UI",Helvetica,Arial,sans-serif;
+  --body:"Hanken Grotesk","Helvetica Neue",Helvetica,Arial,sans-serif;
+  --gl:max(16px,env(safe-area-inset-left,0px)); --gr:max(16px,env(safe-area-inset-right,0px));
+  --wrap:1200px; --r:20px; --arch:999px 999px 28px 28px;
+  --ease:cubic-bezier(.2,.7,.2,1);
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:auto;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--cloud);color:var(--text);font-family:var(--body);font-size:1.0625rem;line-height:1.6;overflow-x:hidden}
+img{display:block;max-width:100%;height:auto}
+a{color:var(--ink);text-decoration:none}
+h1,h2,h3,h4{font-family:var(--display);color:var(--ink);margin:0;line-height:1.08;text-wrap:balance;letter-spacing:-.02em}
+h1{font-weight:700;font-size:clamp(2.5rem,1.2rem + 5vw,5rem)}
+h2{font-weight:700;font-size:clamp(1.9rem,1.2rem + 2.4vw,3rem)}
+h3{font-weight:600;font-size:1.25rem;letter-spacing:-.01em}
+p{margin:0}
+ul{margin:0;padding:0;list-style:none}
+:focus-visible{outline:3px solid var(--sky);outline-offset:3px;border-radius:6px}
+.wrap{width:100%;max-width:var(--wrap);margin:0 auto;padding-left:var(--gl);padding-right:var(--gr)}
+.section{padding:clamp(72px,9vw,128px) 0}
+.lead{color:var(--muted);font-size:1.125rem;max-width:34em}
+.label{display:block;font-weight:600;color:var(--sky);font-size:.95rem;margin-bottom:14px}
+.head{display:grid;gap:18px;max-width:40em;margin-bottom:clamp(36px,5vw,64px)}
+.num{font-variant-numeric:tabular-nums}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;gap:10px;min-height:52px;padding:0 24px;border-radius:999px;font-weight:600;font-size:1rem;border:1.5px solid transparent;cursor:pointer;transition:transform .3s var(--ease),background-color .3s var(--ease),border-color .3s var(--ease),color .3s var(--ease);will-change:transform}
+.btn .ar{width:18px;height:18px;flex:none;transition:transform .3s var(--ease)}
+.btn:hover .ar{transform:translateX(4px)}
+.btn-lime{background:var(--lime);color:var(--ink)}
+.btn-lime:hover{background:var(--lime-deep);transform:translateY(-2px)}
+.btn-ghost{background:var(--white);color:var(--ink);border-color:var(--line)}
+.btn-ghost:hover{border-color:var(--ink);transform:translateY(-2px)}
+.btn-ink{background:transparent;color:var(--white);border-color:rgba(255,255,255,.45)}
+.btn-ink:hover{border-color:#fff;transform:translateY(-2px)}
+.btn-sm{min-height:44px;padding:0 18px;font-size:.95rem}
+.link{display:inline-flex;align-items:center;gap:8px;font-weight:600;color:var(--ink);min-height:44px}
+.link .ar{width:18px;height:18px;transition:transform .3s var(--ease)}
+.link:hover .ar{transform:translateX(4px)}
+.link:hover{color:var(--sky)}
+
+/* progress + header */
+.progress{position:fixed;left:0;top:0;height:3px;width:100%;background:var(--lime);z-index:60;transform-origin:0 50%;transform:scaleX(0)}
+.header{position:fixed;top:0;left:0;right:0;z-index:50;background:var(--white);transition:transform .45s var(--ease),box-shadow .3s var(--ease)}
+.header.is-scrolled{box-shadow:0 6px 24px rgba(11,42,107,.08)}
+.header.is-hidden{transform:translateY(-100%)}
+.header.menu-open.is-hidden{transform:none}
+.hwrap{display:flex;align-items:center;justify-content:space-between;gap:24px;height:84px;transition:height .35s var(--ease)}
+.header.is-scrolled .hwrap{height:66px}
+.brand{display:flex;align-items:center;gap:12px;font-family:var(--display);font-weight:700;color:var(--ink);font-size:1.15rem;letter-spacing:-.02em;min-height:44px}
+.brand svg{width:34px;height:34px;flex:none}
+.brand small{display:block;font-family:var(--body);font-weight:500;font-size:.75rem;color:var(--muted);letter-spacing:0;line-height:1.1}
+.nav{display:flex;align-items:center;gap:30px}
+.nav a:not(.btn){position:relative;display:inline-flex;align-items:center;min-height:44px;font-weight:500;color:var(--ink)}
+.nav a:not(.btn)::after{content:"";position:absolute;left:0;right:0;bottom:8px;height:2px;background:var(--sky);transform:scaleX(0);transform-origin:left;transition:transform .35s var(--ease)}
+.nav a:not(.btn):hover::after,.nav a:not(.btn):focus-visible::after{transform:scaleX(1)}
+.nav .btn{margin-left:8px}
+.hright{display:none;align-items:center;gap:10px}
+.menu{width:44px;height:44px;border:0;background:var(--tint);border-radius:12px;display:grid;place-items:center;cursor:pointer;padding:0}
+.menu span{position:relative;display:block;width:20px;height:2px;background:var(--ink);transition:transform .3s var(--ease)}
+.menu span::before,.menu span::after{content:"";position:absolute;left:0;width:20px;height:2px;background:var(--ink);transition:transform .3s var(--ease)}
+.menu span::before{top:-6px}.menu span::after{top:6px}
+.menu[aria-expanded="true"] span{transform:rotate(45deg)}
+.menu[aria-expanded="true"] span::before{transform:translateY(6px) rotate(-90deg)}
+.menu[aria-expanded="true"] span::after{transform:translateY(-6px) rotate(-90deg)}
+
+/* hero */
+.hero{padding-top:calc(84px + clamp(40px,6vw,88px));padding-bottom:clamp(40px,5vw,72px)}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(32px,5vw,72px);align-items:center}
+.hero .lead{margin-top:26px;font-size:clamp(1.1rem,1rem + .4vw,1.3rem)}
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
+.trust{display:flex;align-items:center;gap:12px;margin-top:40px;color:var(--muted);font-size:.95rem}
+.trust svg{width:22px;height:22px;flex:none;color:var(--sky)}
+.trust b{color:var(--ink);font-weight:600}
+.hero-art{position:relative}
+.arch{position:relative;border-radius:var(--arch);overflow:hidden;background:var(--tint);aspect-ratio:3/4;max-height:min(78vh,760px);margin-left:auto;width:100%;max-width:560px}
+.arch img{position:absolute;left:0;top:-8%;width:100%;height:116%;object-fit:cover}
+.frame{outline:4px solid transparent;outline-offset:5px;transition:outline-color .35s var(--ease)}
+.frame:hover{outline-color:var(--lime)}
+.badge{position:absolute;left:-8px;bottom:36px;display:flex;align-items:center;gap:12px;background:var(--white);border-radius:16px;padding:12px 16px 12px 12px;box-shadow:0 12px 32px rgba(11,42,107,.12);font-size:.9rem;line-height:1.3}
+.badge i{display:grid;place-items:center;width:40px;height:40px;border-radius:12px;background:var(--lime);flex:none}
+.badge svg{width:22px;height:22px;color:var(--ink)}
+.badge b{display:block;color:var(--ink);font-weight:600}
+.badge span{color:var(--muted);font-size:.8rem}
+
+/* facts */
+.facts{padding:clamp(24px,4vw,48px) 0 clamp(56px,7vw,96px)}
+.facts-row{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;border-top:1.5px solid var(--line);padding-top:clamp(28px,4vw,44px)}
+.fact b{display:block;font-family:var(--display);font-weight:700;color:var(--ink);font-size:clamp(2rem,1.4rem + 2vw,3rem);line-height:1;letter-spacing:-.03em;font-variant-numeric:tabular-nums}
+.fact span{display:block;margin-top:10px;color:var(--muted);font-size:.95rem}
+
+/* wave dividers */
+.wave{display:block;width:100%;height:clamp(40px,6vw,88px);line-height:0}
+.wave svg{width:100%;height:100%;display:block}
+.band{background:var(--white)}
+
+/* programmes story */
+.story{padding:clamp(40px,6vw,96px) 0 clamp(72px,9vw,128px)}
+.story-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,6vw,96px);align-items:start}
+.steps{display:grid}
+.step{min-height:80vh;display:flex;flex-direction:column;justify-content:center;padding:40px 0}
+.step .k{display:block;font-weight:600;color:var(--sky);font-size:.95rem;margin-bottom:16px;font-variant-numeric:tabular-nums}
+.step h3{position:relative;font-size:clamp(2rem,1rem + 3.4vw,3.9rem);font-weight:700;line-height:1.02;letter-spacing:-.03em;color:var(--ink);transition:color .5s var(--ease)}
+.step h3::before{content:"";position:absolute;left:-26px;top:.42em;width:12px;height:12px;border-radius:50%;background:var(--lime);transform:scale(0);transition:transform .45s var(--ease)}
+.step.is-active h3::before{transform:scale(1)}
+html.motion-on .step:not(.is-active) h3{color:var(--faint)}
+.spec{display:flex;flex-wrap:wrap;gap:8px 32px;margin:26px 0 0;padding:20px 0 0;border-top:1.5px solid var(--line)}
+.spec div{display:grid;gap:2px}
+.spec dt{font-size:.85rem;color:var(--muted)}
+.spec dd{margin:0;font-weight:600;color:var(--ink);font-variant-numeric:tabular-nums}
+.step p{margin-top:22px;color:var(--muted);max-width:30em}
+.step .link{margin-top:18px}
+.step-pic{display:none}
+.story-visual{position:sticky;top:12vh;height:76vh;border-radius:var(--arch);overflow:hidden;background:var(--tint)}
+.story-visual img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transform:scale(1.05);transition:opacity .7s var(--ease),transform 1.4s var(--ease)}
+.story-visual img:first-child,.story-visual img.is-active{opacity:1;transform:none}
+
+/* about + support */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,5vw,80px);align-items:center}
+.about-grid .text p + p{margin-top:16px}
+.about-pics{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.pic{border-radius:24px;overflow:hidden;background:var(--tint)}
+.pic img{width:100%;height:100%;object-fit:cover}
+.pic.tall{aspect-ratio:3/4}
+.pic.wide{aspect-ratio:4/3;grid-column:1/-1}
+.support{padding-top:0}
+.support-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.sup{background:var(--white);border:1.5px solid var(--line);border-radius:var(--r);padding:28px 24px;transition:transform .35s var(--ease),border-color .35s var(--ease)}
+.sup:hover{transform:translateY(-4px);border-color:var(--sky)}
+.sup svg{width:34px;height:34px;color:var(--sky);margin-bottom:18px}
+.sup h3{margin-bottom:10px}
+.sup p{color:var(--muted);font-size:.98rem}
+
+/* admissions */
+.stepper{position:relative;display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:clamp(28px,4vw,48px)}
+.sp-line{position:absolute;left:12.5%;right:12.5%;top:21px;height:2px;background:var(--line);z-index:0}
+.sp-fill{position:absolute;inset:0;background:var(--sky);transform-origin:left center}
+.sp{position:relative;z-index:1;text-align:left;padding:0 8px}
+.sp-num{position:relative;display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:var(--white);border:2px solid var(--line);font-family:var(--display);font-weight:600;color:var(--ink);margin:0 auto 20px auto;font-variant-numeric:tabular-nums;transition:background-color .35s var(--ease),border-color .35s var(--ease),transform .35s var(--ease)}
+.sp.is-on .sp-num{background:var(--lime);border-color:var(--lime);transform:scale(1.08)}
+.sp h3{text-align:center;margin-bottom:8px}
+.sp p{text-align:center;color:var(--muted);font-size:.98rem;max-width:22em;margin:0 auto}
+.adm-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:clamp(48px,6vw,80px)}
+.panel{border-radius:var(--r);padding:clamp(24px,3vw,40px)}
+.panel.tint{background:var(--tint)}
+.panel.white{background:var(--white);border:1.5px solid var(--line)}
+.panel h3{margin-bottom:22px}
+.cal{display:grid}
+.cal li{display:flex;align-items:baseline;justify-content:space-between;gap:16px;padding:16px 0;border-top:1.5px solid rgba(11,42,107,.12)}
+.cal li:first-child{border-top:0;padding-top:0}
+.cal span{color:var(--text)}
+.cal b{font-family:var(--display);font-weight:600;color:var(--ink);font-variant-numeric:tabular-nums;white-space:nowrap}
+.cal .hl{display:inline-block;background:var(--lime);border-radius:8px;padding:2px 10px}
+.req li{display:flex;gap:14px;align-items:flex-start;padding:12px 0}
+.req svg{width:22px;height:22px;flex:none;color:var(--sky);margin-top:3px}
+.panel .btn{margin-top:22px}
+
+/* gallery */
+.gallery{position:relative;padding:clamp(64px,8vw,112px) 0}
+.gallery .head{margin-bottom:28px}
+.g-scroller{overflow-x:auto;overflow-y:hidden;scroll-snap-type:x proximity;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.g-scroller::-webkit-scrollbar{display:none}
+.g-track{display:flex;gap:16px;padding:6px var(--edge);width:max-content}
+.g-item{position:relative;flex:none;height:300px;border-radius:24px;overflow:hidden;background:var(--tint);scroll-snap-align:start}
+.g-item.l{aspect-ratio:4/3}.g-item.p{aspect-ratio:3/4}
+.g-item img{width:100%;height:100%;object-fit:cover}
+.g-item figcaption{position:absolute;left:14px;bottom:14px;background:rgba(255,255,255,.92);color:var(--ink);font-size:.85rem;font-weight:500;padding:6px 12px;border-radius:999px}
+html.motion-on .gallery{min-height:100vh;display:flex;flex-direction:column;justify-content:center}
+
+/* testimonials */
+.testi{padding:clamp(56px,7vw,104px) 0}
+.testi .head{margin-bottom:28px}
+.tm{overflow-x:auto;scrollbar-width:none}
+.tm::-webkit-scrollbar{display:none}
+html.motion-on .tm{overflow:hidden}
+.tm-track{display:flex;gap:20px;width:max-content;padding:6px var(--edge)}
+.quote{width:min(400px,84vw);flex:none;background:var(--white);border:1.5px solid var(--line);border-radius:var(--r);padding:28px;display:flex;flex-direction:column;gap:22px;transition:border-color .35s var(--ease)}
+.quote:hover{border-color:var(--sky)}
+.quote blockquote{margin:0;font-size:1.08rem;line-height:1.55;color:var(--text)}
+.quote .who{display:flex;align-items:center;gap:12px;margin-top:auto}
+.quote .who img{width:46px;height:46px;border-radius:50%;object-fit:cover}
+.quote .who b{display:block;font-weight:600;color:var(--ink)}
+.quote .who span{display:block;color:var(--muted);font-size:.9rem}
+
+/* news */
+.news-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{display:flex;flex-direction:column;gap:14px;background:var(--white);border:1.5px solid var(--line);border-radius:var(--r);padding:28px;transition:transform .35s var(--ease),box-shadow .35s var(--ease)}
+.card:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(11,42,107,.1)}
+.chip{align-self:flex-start;background:var(--tint);color:var(--ink);font-weight:600;font-size:.85rem;padding:5px 12px;border-radius:999px;font-variant-numeric:tabular-nums}
+.card p{color:var(--muted);font-size:.98rem}
+.card .link{margin-top:auto}
+
+/* cta */
+.cta{padding:0 0 clamp(72px,9vw,128px)}
+.cta-box{background:var(--ink);color:var(--white);border-radius:32px;padding:clamp(36px,5vw,72px);display:grid;grid-template-columns:1.2fr .8fr;gap:32px;align-items:center}
+.cta-box h2{color:var(--white)}
+.cta-box p{margin-top:16px;color:rgba(255,255,255,.78);max-width:34em}
+.cta-box .actions{margin-top:0;justify-content:flex-end}
+.cta-box .tel{margin-top:16px;font-size:.95rem;color:rgba(255,255,255,.7)}
+.cta-box .tel a{color:var(--white);font-weight:600}
+
+/* footer */
+.footer{border-top:1.5px solid var(--line);padding:clamp(48px,6vw,72px) 0 32px;font-size:.95rem}
+.f-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.3fr;gap:32px}
+.footer h4{font-size:1rem;margin-bottom:14px}
+.footer li{padding:5px 0;color:var(--muted)}
+.footer li a{color:var(--text);display:inline-block;min-height:30px;line-height:30px}
+.footer li a:hover{color:var(--sky)}
+.footer .about{color:var(--muted);margin-top:14px;max-width:28em}
+.legal{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 24px;margin-top:40px;padding-top:24px;border-top:1.5px solid var(--line);color:var(--muted);font-size:.88rem}
+
+/* concept bar */
+.concept-bar{position:fixed;right:14px;bottom:14px;z-index:70;display:flex;align-items:center;gap:12px;background:var(--white);border:1.5px solid var(--line);border-radius:999px;padding:8px 14px;font-size:.82rem;box-shadow:0 10px 28px rgba(11,42,107,.12)}
+.concept-bar a{color:var(--muted);font-weight:500}
+.concept-bar a:hover{color:var(--ink)}
+.concept-bar b{font-family:var(--display);color:var(--ink);font-weight:600}
+.concept-bar .l{color:var(--sky);font-weight:600}
+.concept-bar .nx{color:var(--ink);font-weight:600}
+
+/* responsive */
+@media (max-width:1100px){
+  .nav{gap:22px}
+}
+@media (max-width:900px){
+  .nav{display:none;position:absolute;left:0;right:0;top:100%;background:var(--white);flex-direction:column;align-items:stretch;gap:0;padding:8px var(--gl) 20px;border-top:1.5px solid var(--line);box-shadow:0 20px 40px rgba(11,42,107,.12)}
+  .nav.open{display:flex}
+  .nav a:not(.btn){min-height:50px;font-size:1.1rem;border-bottom:1px solid var(--line)}
+  .nav a:not(.btn)::after{display:none}
+  .nav .btn{display:none}
+  .hright{display:flex}
+  .hwrap{height:72px}
+  .hero{padding-top:calc(72px + 32px)}
+  .hero-grid{grid-template-columns:1fr;gap:40px}
+  .hero-art{order:2}
+  .arch{max-width:none;aspect-ratio:4/5;max-height:62vh}
+  .badge{left:12px;bottom:18px}
+  .facts-row{grid-template-columns:repeat(2,1fr);gap:28px 20px}
+  .story-grid{grid-template-columns:1fr;gap:0}
+  .story-visual{display:none}
+  .step{min-height:0;padding:32px 0 48px;border-top:1.5px solid var(--line)}
+  .step:first-child{border-top:0;padding-top:0}
+  .step h3::before{display:none}
+  .step-pic{display:block;border-radius:var(--arch);overflow:hidden;aspect-ratio:4/5;max-height:420px;margin-bottom:28px;background:var(--tint)}
+  .step-pic img{width:100%;height:100%;object-fit:cover}
+  html.motion-on .step:not(.is-active) h3{color:var(--ink)}
+  .about-grid{grid-template-columns:1fr}
+  .support-grid{grid-template-columns:repeat(2,1fr)}
+  .stepper{grid-template-columns:1fr;gap:28px}
+  .sp{padding:0 0 0 64px}
+  .sp-num{position:absolute;left:0;top:0;margin:0}
+  .sp h3,.sp p{text-align:left;margin-left:0}
+  .sp-line{left:21px;right:auto;top:22px;bottom:22px;width:2px;height:auto}
+  .sp-fill{transform-origin:center top}
+  .adm-grid{grid-template-columns:1fr}
+  .news-grid{grid-template-columns:1fr}
+  .cta-box{grid-template-columns:1fr}
+  .cta-box .actions{justify-content:flex-start;margin-top:24px}
+  .f-grid{grid-template-columns:1fr 1fr}
+}
+@media (min-width:900px){
+  html.motion-on .g-scroller{overflow:visible}
+  html.motion-on .gallery{overflow:hidden}
+  .g-item{height:min(62vh,560px)}
+}
+@media (max-width:560px){
+  .concept-bar .l{display:none}
+  .support-grid{grid-template-columns:1fr}
+  .facts-row{grid-template-columns:1fr 1fr}
+  .f-grid{grid-template-columns:1fr}
+  .brand small{display:none}
+  .cal li{flex-direction:column;align-items:flex-start;gap:4px}
+}
+html.motion-reduced *{transition-duration:.01ms!important;animation:none!important}
+</style>
+</head>
+<body>
+
+<div class="progress" id="progress" aria-hidden="true"></div>
+
+<header class="header" id="header">
+  <div class="wrap hwrap">
+    <a class="brand" href="#top" aria-label="Brightwit College home">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M5 30V16A11 11 0 0 1 27 16v14z" fill="#0B2A6B"/><circle cx="16" cy="17" r="4.2" fill="#D6F25A"/></svg>
+      <span>Brightwit College<small>of Professional Studies</small></span>
+    </a>
+    <nav class="nav" id="nav" aria-label="Primary">
+      <a href="#programmes">Programmes</a>
+      <a href="#about">Why Brightwit</a>
+      <a href="#admissions">Admissions</a>
+      <a href="#gallery">Campus</a>
+      <a href="#news">News</a>
+      <a href="#contact">Contact</a>
+      <a class="btn btn-lime btn-sm" href="#admissions">Apply now</a>
+    </nav>
+    <div class="hright">
+      <a class="btn btn-lime btn-sm" href="#admissions">Apply</a>
+      <button class="menu" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="nav"><span></span></button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-text">
+      <h1>Trained for real work, in Nairobi.</h1>
+      <p class="lead">Certificate courses in Beauty &amp; Cosmetology, Professional Driving and Barista &amp; Coffee Arts. Small classes, real equipment, and a TVETA-registered certificate at the end. Next intake starts January 2027.</p>
+      <div class="actions">
+        <a class="btn btn-lime" href="#admissions" data-magnetic>Apply for January 2027 <svg class="ar" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <a class="btn btn-ghost" href="#programmes">See the programmes</a>
+      </div>
+      <p class="trust">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6l8-3z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span><b>TVETA-registered</b> vocational training centre, Kony House, Ngong Road.</span>
+      </p>
+    </div>
+    <div class="hero-art">
+      <div class="arch frame">
+        <img src="../img/campus-students-duo-portrait.jpg" alt="Two smiling Brightwit students in white college T-shirts" width="1050" height="1400" data-parallax="0.16" fetchpriority="high">
+      </div>
+      <div class="badge">
+        <i><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6l8-3z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></i>
+        <div><b>Registered under the TVET Act</b><span class="num">TVETA/PRIVATE/TVC/0138/2026</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="facts" aria-label="College facts">
+  <div class="wrap facts-row">
+    <div class="fact"><b class="num">2018</b><span>Founded on Ngong Road, Nairobi</span></div>
+    <div class="fact"><b data-count="3">3</b><span>Certificate programmes</span></div>
+    <div class="fact"><b data-count="2500" data-suffix="+">2,500+</b><span>Graduates working in the trade</span></div>
+    <div class="fact"><b data-count="92" data-suffix="%">92%</b><span>Placement rate after graduation</span></div>
+  </div>
+</section>
+
+<div class="wave" aria-hidden="true"><svg viewBox="0 0 1440 88" preserveAspectRatio="none"><path d="M0 48C240 92 480 4 720 44S1200 88 1440 36V88H0z" fill="#FFFFFF"/></svg></div>
+
+<div class="band">
+<section class="story" id="programmes">
+  <div class="wrap">
+    <div class="head r">
+      <span class="label">Programmes</span>
+      <h2>Three programmes. Each one leads to a job.</h2>
+      <p class="lead">Every course is certificate level, taught hands-on, and runs in morning, evening or weekend classes so you can keep working while you train.</p>
+    </div>
+    <div class="story-grid">
+      <div class="steps">
+        <article class="step" data-step>
+          <div class="step-pic"><img src="../img/beauty-glam-03.jpg" alt="Student applying precise makeup to a client" width="1050" height="1400" loading="lazy"></div>
+          <h3>Beauty &amp; Cosmetology</h3>
+          <dl class="spec">
+            <div><dt>Duration</dt><dd>4 months</dd></div>
+            <div><dt>Fee</dt><dd>KSh 45,000</dd></div>
+            <div><dt>Classes</dt><dd>Morning, evening, weekend</dd></div>
+          </dl>
+          <p>Makeup artistry, skincare and salon practice taught on real clients in the training salon.</p>
+          <a class="link" href="#admissions">Apply for this programme <svg class="ar" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        </article>
+        <article class="step" data-step>
+          <div class="step-pic"><img src="../img/driving-woman-window.jpg" alt="Smiling learner driver at the window of a car" width="1050" height="1400" loading="lazy"></div>
+          <h3>Professional Driving</h3>
+          <dl class="spec">
+            <div><dt>Duration</dt><dd>3 months</dd></div>
+            <div><dt>Fee</dt><dd>KSh 24,000</dd></div>
+            <div><dt>Classes</dt><dd>Weekday, weekend</dd></div>
+          </dl>
+          <p>Weekday and weekend classes that turn you into a confident, defensive driver on Nairobi roads.</p>
+          <a class="link" href="#admissions">Apply for this programme <svg class="ar" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        </article>
+        <article class="step" data-step>
+          <div class="step-pic"><img src="../img/barista-latte-pour.jpg" alt="Barista pouring latte art into a cup" width="1400" height="1050" loading="lazy"></div>
+          <h3>Barista &amp; Coffee Arts</h3>
+          <dl class="spec">
+            <div><dt>Duration</dt><dd>4 months</dd></div>
+            <div><dt>Fee</dt><dd>KSh 32,000</dd></div>
+            <div><dt>Classes</dt><dd>Morning, evening, weekend</dd></div>
+          </dl>
+          <p>Espresso, milk texturing and latte art on commercial machines; get hired in cafés, hotels and specialty coffee shops.</p>
+          <a class="link" href="#admissions">Apply for this programme <svg class="ar" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        </article>
+      </div>
+      <div class="story-visual frame" aria-hidden="true">
+        <img src="../img/beauty-glam-03.jpg" alt="" width="1050" height="1400" loading="lazy" data-step-img>
+        <img src="../img/driving-woman-window.jpg" alt="" width="1050" height="1400" loading="lazy" data-step-img>
+        <img src="../img/barista-latte-pour.jpg" alt="" width="1400" height="1050" loading="lazy" data-step-img>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="about">
+  <div class="wrap about-grid">
+    <div class="text r">
+      <span class="label">Why Brightwit</span>
+      <h2>A college built around the job you want.</h2>
+      <p class="lead" style="margin-top:20px">Brightwit College opened in 2018 at Kony House on Ngong Road. We teach three trades, and we teach them the way they are done at work: on real salon stations, in a training fleet, and on commercial espresso machines.</p>
+      <p>Classes run in the morning, evening and at the weekend. When you finish, you leave with a certificate from a TVETA-registered centre, an industry attachment behind you, and help finding a job or starting your own business. More than 2,500 people have done it since we opened, and 92% of them are placed in work.</p>
+      <a class="link" href="#admissions" style="margin-top:22px">How to apply <svg class="ar" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    </div>
+    <div class="about-pics">
+      <div class="pic wide frame"><img src="../img/campus-class-group-01.jpg" alt="A Brightwit class group in white college T-shirts on campus" width="1400" height="1050" loading="lazy"></div>
+      <div class="pic tall frame"><img src="../img/campus-makeup-practice-desk.jpg" alt="Student practising with a makeup palette at a classroom desk" width="1050" height="1400" loading="lazy"></div>
+      <div class="pic tall frame"><img src="../img/campus-classroom-beauty-session.jpg" alt="Beauty class in session in a Brightwit classroom" width="1050" height="1400" loading="lazy"></div>
+    </div>
+  </div>
+</section>
+
+<section class="section support" aria-label="Student support">
+  <div class="wrap">
+    <div class="head r">
+      <h2>What you get as a student</h2>
+    </div>
+    <div class="support-grid">
+      <div class="sup r">
+        <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M6 24h20M8 24V12l8-5 8 5v12" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M13 24v-6h6v6" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+        <h3>Practical-first classes</h3>
+        <p>Real salon stations, a training fleet and commercial espresso machines. You learn by doing the work.</p>
+      </div>
+      <div class="sup r">
+        <svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="11" fill="none" stroke="currentColor" stroke-width="2"/><path d="M16 9v7l5 3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        <h3>Flexible schedules</h3>
+        <p>Morning, evening and weekend classes, so you can train around a job or family.</p>
+      </div>
+      <div class="sup r">
+        <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M5 25l7-7 5 4 10-11" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M21 11h6v6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <h3>Career support</h3>
+        <p>Industry attachments, placement help, and guidance if you want to start your own business.</p>
+      </div>
+      <div class="sup r">
+        <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 4l10 4v8c0 6.5-4.5 10.5-10 12C10.5 26.5 6 22.5 6 16V8l10-4z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M12 16l3 3 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <h3>Certified and regulated</h3>
+        <p>A registered vocational training centre under the TVET Act, Cap. 210A.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="admissions">
+  <div class="wrap">
+    <div class="head r">
+      <span class="label">Admissions</span>
+      <h2>Four steps from here to your first class.</h2>
+      <p class="lead">Applications for the January 2027 intake are open now. Apply online or walk in at the campus.</p>
+    </div>
+    <div class="stepper" id="stepper">
+      <div class="sp-line" aria-hidden="true"><div class="sp-fill"></div></div>
+      <div class="sp"><div class="sp-num">1</div><h3>Choose your programme</h3><p>Beauty &amp; Cosmetology, Professional Driving or Barista &amp; Coffee Arts.</p></div>
+      <div class="sp"><div class="sp-num">2</div><h3>Submit your application</h3><p>Online or at the campus. We confirm receipt within one working day.</p></div>
+      <div class="sp"><div class="sp-num">3</div><h3>Interview and document check</h3><p>A short conversation with an admissions officer, and we check your documents.</p></div>
+      <div class="sp"><div class="sp-num">4</div><h3>Enrol and start learning</h3><p>Pick a morning, evening or weekend class and begin.</p></div>
+    </div>
+    <div class="adm-grid">
+      <div class="panel tint r">
+        <h3>Key dates for January 2027</h3>
+        <ul class="cal">
+          <li><span>Open Day</span><b>15 Nov 2026</b></li>
+          <li><span>Application deadline</span><b>5 Dec 2026</b></li>
+          <li><span>Classes begin</span><b class="hl">12 Jan 2027</b></li>
+        </ul>
+        <a class="btn btn-lime" href="#contact">Start your application <svg class="ar" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </div>
+      <div class="panel white r">
+        <h3>What to bring</h3>
+        <ul class="req">
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M8 12l3 3 5-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>National ID or passport</span></li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M8 12l3 3 5-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Two passport-size photos</span></li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M8 12l3 3 5-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Previous certificates, if you have any</span></li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M8 12l3 3 5-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>KSh 500 application fee</span></li>
+        </ul>
+        <p style="margin-top:14px;color:var(--muted);font-size:.95rem">Questions? Call <a href="tel:+254715798294" class="num" style="font-weight:600">+254 715 798294</a>, Monday to Saturday, 8:00 AM to 5:00 PM.</p>
+      </div>
+    </div>
+  </div>
+</section>
+</div>
+
+<div class="wave" aria-hidden="true" style="background:var(--white)"><svg viewBox="0 0 1440 88" preserveAspectRatio="none"><path d="M0 40C240 0 480 88 720 48S1200 0 1440 52V88H0z" fill="#F7FAFF"/></svg></div>
+
+<section class="gallery" id="gallery">
+  <div class="wrap"><div class="head r">
+    <span class="label">Campus</span>
+    <h2>Kony House, Ngong Road.</h2>
+    <p class="lead">Classrooms, the training salon and the people in them. Come and see it for yourself on Open Day, 15 November.</p>
+  </div></div>
+  <div class="g-scroller">
+    <div class="g-track" id="gtrack">
+      <figure class="g-item l frame"><img src="../img/campus-class-group-02.jpg" alt="Brightwit class group photo outside the campus" width="1400" height="1050" loading="lazy"><figcaption>Class group, 2026</figcaption></figure>
+      <figure class="g-item p frame"><img src="../img/campus-classroom-beauty-session.jpg" alt="Beauty and cosmetology class in session" width="1050" height="1400" loading="lazy"><figcaption>Beauty class</figcaption></figure>
+      <figure class="g-item l frame"><img src="../img/beauty-salon-stylist.jpg" alt="Stylist draping a client in the training salon" width="1400" height="1050" loading="lazy"><figcaption>Training salon</figcaption></figure>
+      <figure class="g-item p frame"><img src="../img/driving-man-steering.jpg" alt="Learner driver with both hands on the steering wheel" width="1050" height="1400" loading="lazy"><figcaption>Driving practice</figcaption></figure>
+      <figure class="g-item l frame"><img src="../img/barista-pour-dark.jpg" alt="Barista in a dark apron pouring milk into a coffee" width="1400" height="1050" loading="lazy"><figcaption>Coffee lab</figcaption></figure>
+      <figure class="g-item l frame"><img src="../img/campus-class-group-03.jpg" alt="Students and trainers gathered on campus" width="1400" height="1050" loading="lazy"><figcaption>Students and trainers</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="testi" aria-label="Student stories">
+  <div class="wrap"><div class="head r">
+    <span class="label">Graduates</span>
+    <h2>What our students say.</h2>
+  </div></div>
+  <div class="tm" id="tm">
+    <div class="tm-track" id="tmtrack">
+      <div class="quote"><blockquote>“The practical salon training made all the difference. I walked into my first job at a Westlands salon two weeks after graduation.”</blockquote><div class="who"><img src="../img/portrait-woman-02.jpg" alt="" width="200" height="200" loading="lazy"><div><b>Wanjiru M.</b><span>Beauty &amp; Cosmetology, 2025</span></div></div></div>
+      <div class="quote"><blockquote>“My instructor pushed me to drive properly, not just pass. The defensive driving sessions gave me confidence on Nairobi roads.”</blockquote><div class="who"><img src="../img/portrait-man-01.jpg" alt="" width="200" height="200" loading="lazy"><div><b>Collins O.</b><span>Professional Driving, 2024</span></div></div></div>
+      <div class="quote"><blockquote>“From espresso basics to latte art, everything was hands-on. I now work as a head barista in a specialty coffee shop in the city centre.”</blockquote><div class="who"><img src="../img/portrait-woman-01.jpg" alt="" width="200" height="200" loading="lazy"><div><b>Amina H.</b><span>Barista &amp; Coffee Arts, 2025</span></div></div></div>
+      <div class="quote" aria-hidden="true"><blockquote>“The practical salon training made all the difference. I walked into my first job at a Westlands salon two weeks after graduation.”</blockquote><div class="who"><img src="../img/portrait-woman-02.jpg" alt="" width="200" height="200" loading="lazy"><div><b>Wanjiru M.</b><span>Beauty &amp; Cosmetology, 2025</span></div></div></div>
+      <div class="quote" aria-hidden="true"><blockquote>“My instructor pushed me to drive properly, not just pass. The defensive driving sessions gave me confidence on Nairobi roads.”</blockquote><div class="who"><img src="../img/portrait-man-01.jpg" alt="" width="200" height="200" loading="lazy"><div><b>Collins O.</b><span>Professional Driving, 2024</span></div></div></div>
+      <div class="quote" aria-hidden="true"><blockquote>“From espresso basics to latte art, everything was hands-on. I now work as a head barista in a specialty coffee shop in the city centre.”</blockquote><div class="who"><img src="../img/portrait-woman-01.jpg" alt="" width="200" height="200" loading="lazy"><div><b>Amina H.</b><span>Barista &amp; Coffee Arts, 2025</span></div></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="news">
+  <div class="wrap">
+    <div class="head r">
+      <span class="label">News and events</span>
+      <h2>Coming up at Brightwit.</h2>
+    </div>
+    <div class="news-grid">
+      <article class="card r">
+        <span class="chip">15 Nov 2026</span>
+        <h3>Open Day</h3>
+        <p>Tour the campus, meet the trainers, try a makeup look, pour some latte art and take a turn on the driving simulation.</p>
+        <a class="link" href="#contact">Save your place <svg class="ar" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </article>
+      <article class="card r">
+        <span class="chip">5 Dec 2026</span>
+        <h3>Early-bird discount closes</h3>
+        <p>Apply before 5 December to take the early-bird discount on your January 2027 fees. This is also the application deadline.</p>
+        <a class="link" href="#admissions">See how to apply <svg class="ar" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </article>
+      <article class="card r">
+        <span class="chip">12 Jan 2027</span>
+        <h3>January 2027 intake begins</h3>
+        <p>Morning, evening and weekend classes start for all three programmes. Enrolled students receive their timetables in the first week of January.</p>
+        <a class="link" href="#programmes">Browse programmes <svg class="ar" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="wrap">
+    <div class="cta-box r">
+      <div>
+        <h2>Applications for January 2027 are open.</h2>
+        <p>The deadline is 5 December 2026. Apply online or come to Kony House, Ngong Road, Monday to Saturday between 8:00 AM and 5:00 PM.</p>
+        <p class="tel">Or call <a href="tel:+254715798294" class="num">+254 715 798294</a> or <a href="tel:+254758495577" class="num">+254 758 495577</a>.</p>
+      </div>
+      <div class="actions">
+        <a class="btn btn-lime" href="#contact">Apply now <svg class="ar" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <a class="btn btn-ink" href="#news">Visit on Open Day</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="footer" id="contact">
+  <div class="wrap">
+    <div class="f-grid">
+      <div>
+        <a class="brand" href="#top" aria-label="Brightwit College home">
+          <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M5 30V16A11 11 0 0 1 27 16v14z" fill="#0B2A6B"/><circle cx="16" cy="17" r="4.2" fill="#D6F25A"/></svg>
+          <span>Brightwit College<small>of Professional Studies</small></span>
+        </a>
+        <p class="about">Hands-on, certificate-level training in Beauty &amp; Cosmetology, Professional Driving and Barista &amp; Coffee Arts. Registered Vocational Training Centre, Nairobi.</p>
+      </div>
+      <div>
+        <h4>Programmes</h4>
+        <ul><li><a href="#programmes">Beauty &amp; Cosmetology</a></li><li><a href="#programmes">Professional Driving</a></li><li><a href="#programmes">Barista &amp; Coffee Arts</a></li></ul>
+      </div>
+      <div>
+        <h4>College</h4>
+        <ul><li><a href="#about">Why Brightwit</a></li><li><a href="#admissions">Admissions</a></li><li><a href="#gallery">Campus</a></li><li><a href="#news">News and events</a></li></ul>
+      </div>
+      <div>
+        <h4>Admissions office</h4>
+        <ul>
+          <li>Kony House, Ngong Road, Ngong</li>
+          <li>P.O. Box 13597-00100, Nairobi</li>
+          <li><a href="tel:+254715798294" class="num">+254 715 798294</a></li>
+          <li><a href="tel:+254758495577" class="num">+254 758 495577</a></li>
+          <li><a href="mailto:admissions@brightwitcollege.co.ke">admissions@brightwitcollege.co.ke</a></li>
+          <li>Mon–Sat, 8:00 AM – 5:00 PM</li>
+        </ul>
+      </div>
+    </div>
+    <div class="legal">
+      <span>© 2026 Brightwit College of Professional Studies.</span>
+      <span>Registered Vocational Training Centre · TVETA/PRIVATE/TVC/0138/2026</span>
+    </div>
+  </div>
+</footer>
+
+<nav class="concept-bar" aria-label="Design concepts"><a href="../">All concepts</a><b>5 / 5</b><span class="l">Anga</span><a class="nx" href="../concept-1/">Next concept</a></nav>
+
+<script src="../js/gsap.min.js"></script>
+<script src="../js/ScrollTrigger.min.js"></script>
+<script src="../js/lenis.min.js"></script>
+<script src="../js/motion.js"></script>
+<script>
+(function () {
+  BW.init({ smooth: true, anchorOffset: 90 });
+
+  var header = document.getElementById('header'), nav = document.getElementById('nav'), menuBtn = document.getElementById('menuBtn');
+
+  /* mobile menu */
+  function closeMenu() { nav.classList.remove('open'); header.classList.remove('menu-open'); menuBtn.setAttribute('aria-expanded', 'false'); menuBtn.setAttribute('aria-label', 'Open menu'); }
+  menuBtn.addEventListener('click', function () {
+    var open = nav.classList.toggle('open');
+    header.classList.toggle('menu-open', open);
+    menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    menuBtn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+  });
+  nav.addEventListener('click', function (e) { if (e.target.closest('a')) closeMenu(); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeMenu(); });
+
+  /* chrome */
+  BW.progress(document.getElementById('progress'));
+  BW.header(header, { at: 40 });
+  BW.counters('[data-count]');
+  BW.parallax('[data-parallax]');
+  BW.magnetic('[data-magnetic]', 0.3);
+
+  /* page-load moment: headline words rise, arch unveils upward, photo settles from 1.08 */
+  var heroImg = document.querySelector('.hero .arch img');
+  var tl = BW.intro();
+  if (tl) {
+    var words = BW.splitWords(document.querySelector('.hero h1'));
+    var rest = BW.$('.hero .lead, .hero .actions, .hero .trust');
+    var arch = document.querySelector('.hero .arch'), badge = document.querySelector('.hero .badge');
+    gsap.set(words, { yPercent: 110 });
+    gsap.set(rest, { y: 24, opacity: 0 });
+    gsap.set(arch, { clipPath: 'inset(0 0 100% 0)' });
+    gsap.set(heroImg, { scale: 1.08 });
+    gsap.set(badge, { y: 16, opacity: 0 });
+    tl.to(words, { yPercent: 0, duration: 1, stagger: 0.06 }, 0.1)
+      .to(rest, { y: 0, opacity: 1, duration: 0.8, stagger: 0.1 }, 0.5)
+      .to(arch, { clipPath: 'inset(0 0 0% 0)', duration: 1.2, ease: 'power4.inOut' }, 0.15)
+      .to(heroImg, { scale: 1, duration: 2.4, ease: 'power2.out' }, 0.3)
+      .to(badge, { y: 0, opacity: 1, duration: 0.7 }, 1.1);
+  }
+
+  /* quiet reveals: section heads, cards, panels */
+  BW.reveal('.fact', { y: 24, opacity: 0 }, { stagger: 0.08 });
+  BW.reveal('.r', { y: 28, opacity: 0 }, { stagger: 0.08, duration: 0.8 });
+
+  /* the sticky story */
+  BW.scrollSteps(document.getElementById('programmes'), { steps: '[data-step]', images: '[data-step-img]' });
+
+  /* admissions stepper: the connecting line fills as you scroll past, each step lights up in turn */
+  var stepper = document.getElementById('stepper');
+  if (stepper) {
+    var fill = stepper.querySelector('.sp-fill'), sps = BW.$('.sp', stepper);
+    var light = function (p) { sps.forEach(function (s, i) { s.classList.toggle('is-on', p >= i / (sps.length - 1) - 0.02); }); };
+    if (BW.reduced) { light(1); }
+    else {
+      gsap.matchMedia().add({ desk: '(min-width: 900px)', mob: '(max-width: 899px)' }, function (ctx) {
+        var prop = ctx.conditions.desk ? 'scaleX' : 'scaleY', from = {}, to = {};
+        from[prop] = 0; to[prop] = 1;
+        to.ease = 'none';
+        to.scrollTrigger = { trigger: stepper, start: 'top 78%', end: 'bottom 45%', scrub: 0.4, onUpdate: function (self) { light(self.progress); } };
+        gsap.fromTo(fill, from, to);
+      });
+    }
+  }
+
+  /* campus gallery: pinned horizontal scroll on desktop */
+  BW.horizontal(document.getElementById('gallery'), document.getElementById('gtrack'));
+
+  /* testimonials marquee. BW.marquee multiplies its speed each frame, so we hand it an object whose
+     numeric value we ease down on hover (slow to a crawl) and back up on leave. */
+  var tm = document.getElementById('tm'), tmTrack = document.getElementById('tmtrack');
+  if (tm && tmTrack) {
+    var pace = { v: 42 }, speed = { valueOf: function () { return pace.v; } };
+    BW.marquee(tmTrack, { speed: speed });
+    if (BW.fine && !BW.reduced) {
+      tm.addEventListener('pointerenter', function () { gsap.to(pace, { v: 4, duration: 0.6, ease: 'power2.out', overwrite: true }); });
+      tm.addEventListener('pointerleave', function () { gsap.to(pace, { v: 42, duration: 0.8, ease: 'power2.inOut', overwrite: true }); });
+    }
+  }
+
+  window.addEventListener('load', function () { ScrollTrigger.refresh(); });
+})();
+</script>
+</body>
+</html>

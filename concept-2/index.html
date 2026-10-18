@@ -36,7 +36,7 @@ a{color:inherit;text-decoration:none}
 h1,h2,h3,h4{font-family:var(--font-display);font-weight:800;line-height:1.02;margin:0;text-wrap:balance;letter-spacing:-.025em}
 p{margin:0}
 .wrap{max-width:var(--wrap);margin-inline:auto;padding-left:var(--gl);padding-right:var(--gr)}
-.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--ink);background:var(--sun);padding:6px 12px;border-radius:999px}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:13.5px;font-weight:700;color:var(--ink);background:var(--sun);padding:6px 12px;border-radius:999px}
 .eyebrow.rose{background:var(--rose-soft);color:var(--rose)}
 .eyebrow.sky{background:var(--sky-soft);color:var(--sky)}
 .eyebrow.cocoa{background:var(--cocoa-soft);color:var(--cocoa)}
@@ -92,7 +92,7 @@ p{margin:0}
 .t-stat span{font-size:14.5px;color:#c7cde3;font-weight:500}
 .t-img{grid-column:span 3;background:var(--mist)}
 .t-open{grid-column:span 3;background:var(--coral);color:#fff;padding:26px;display:flex;flex-direction:column;justify-content:space-between;gap:12px}
-.t-open .pill{align-self:flex-start;background:#fff;color:var(--coral);border-radius:999px;padding:5px 12px;font-size:12px;font-weight:800;letter-spacing:.06em;text-transform:uppercase}
+.t-open .pill{align-self:flex-start;background:#fff;color:var(--coral);border-radius:999px;padding:5px 12px;font-size:13px;font-weight:700}
 .t-open b{font-family:var(--font-display);font-size:24px;font-weight:800;line-height:1.1;letter-spacing:-.02em}
 .t-open span{font-size:14px;opacity:.95}
 .t-tv{grid-column:span 3;background:var(--mist);padding:24px;display:flex;flex-direction:column;justify-content:space-between;gap:10px}
@@ -132,14 +132,14 @@ p{margin:0}
 .prog:hover .media img{transform:scale(1.05)}
 .prog .fee{position:absolute;right:-6px;top:-6px;width:92px;height:92px;border-radius:50%;display:grid;place-items:center;text-align:center;font-family:var(--font-display);font-weight:800;line-height:1;transform:rotate(8deg);box-shadow:0 10px 24px -10px rgba(20,26,51,.5);color:#fff}
 .prog.rose .fee{background:var(--rose)}.prog.sky .fee{background:var(--sky)}.prog.cocoa .fee{background:var(--cocoa)}
-.prog .fee small{display:block;font-size:10px;font-weight:700;letter-spacing:.08em;margin-bottom:3px;opacity:.9}
+.prog .fee small{display:block;font-size:11px;font-weight:700;margin-bottom:3px;opacity:.9}
 .prog .fee b{font-size:17px}
 .prog .body{padding-inline:10px;display:flex;flex-direction:column;gap:12px;flex:1}
 .prog h3{font-size:28px;letter-spacing:-.02em}
 .prog p{color:#3d4360;font-size:15px}
 .prog .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:4px}
 .prog .chips span{background:#fff;border-radius:999px;padding:6px 12px;font-size:13px;font-weight:600}
-.prog .go{margin-top:auto;padding-top:8px;font-weight:700;display:inline-flex;gap:8px;align-items:center}
+.prog .go{margin-top:auto;padding-top:8px;font-weight:700;display:inline-flex;gap:8px;align-items:center;text-decoration:underline;text-underline-offset:4px;text-decoration-thickness:2px}
 .prog.rose .go{color:var(--rose)}.prog.sky .go{color:var(--sky)}.prog.cocoa .go{color:var(--cocoa)}
 @media(max-width:960px){.progs{grid-template-columns:1fr}.prog{flex-direction:row;align-items:center}.prog .media{width:42%;flex:none;aspect-ratio:1}}
 @media(max-width:600px){.prog{flex-direction:column;align-items:stretch}.prog .media{width:100%;aspect-ratio:4/3}}
@@ -201,7 +201,7 @@ p{margin:0}
 .news-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
 .news{border:2px solid var(--line);border-radius:var(--r);padding:26px;display:flex;flex-direction:column;gap:12px;transition:border-color .2s,transform .2s}
 .news:hover{border-color:var(--ink);transform:translateY(-4px)}
-.news .date{display:inline-flex;align-self:flex-start;gap:8px;align-items:center;font-size:12.5px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;border-radius:999px;padding:6px 12px;background:var(--sun)}
+.news .date{display:inline-flex;align-self:flex-start;gap:8px;align-items:center;font-size:13px;font-weight:700;border-radius:999px;padding:6px 12px;background:var(--sun)}
 .news .date.ev{background:var(--sky-soft);color:var(--sky)}
 .news h3{font-size:24px;letter-spacing:-.02em}
 .news p{color:var(--muted);font-size:15px}
@@ -333,7 +333,7 @@ p{margin:0}
       </div>
       <div class="tile t-stat"><b>2,500+</b><span>graduates since 2018, working in salons, cafés and on the road</span></div>
       <div class="tile t-img"><img src="../img/barista-latte-hand.jpg" alt="Latte art in a cup held by a barista" loading="lazy"></div>
-      <div class="tile t-open"><span class="pill">Applications open</span><b>January 2027 intake</b><span>Open Day 15 Nov · Deadline 5 Dec</span></div>
+      <div class="tile t-open"><span class="pill">Applications open</span><b>January 2027 intake</b><span>Open Day 15 Nov, deadline 5 Dec</span></div>
       <div class="tile t-tv"><div class="seal"><svg viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6l8-3z"/><path d="M9 12l2 2 4-4"/></svg></div><div><b>TVETA-registered training centre</b><span>TVETA/PRIVATE/TVC/0138/2026</span></div></div>
     </div>
   </div>
@@ -358,35 +358,35 @@ p{margin:0}
     <div class="progs">
       <article class="prog rose">
         <div class="media"><img src="../img/beauty-glam-01.jpg" alt="A model with glowing, professional makeup" loading="lazy"></div>
-        <div class="fee"><small>FEES</small><b>KSh 45K</b></div>
+        <div class="fee"><small>Fees</small><b>KSh 45K</b></div>
         <div class="body">
-          <span class="eyebrow rose">Beauty</span>
+          <span class="eyebrow rose">Beauty programme</span>
           <h3>Beauty &amp; Cosmetology</h3>
           <p>Makeup artistry, skincare and salon services with hands-on practice from week one.</p>
-          <div class="chips"><span>4 months</span><span>Certificate</span><span>Morning · Evening · Weekend</span></div>
-          <a class="go" href="#apply">Programme details →</a>
+          <div class="chips"><span>4 months</span><span>Certificate</span><span>Morning, evening or weekend</span></div>
+          <a class="go" href="#apply">Programme details</a>
         </div>
       </article>
       <article class="prog sky">
         <div class="media"><img src="../img/driving-man-sunny.jpg" alt="A young driver at the wheel on a sunny day" loading="lazy"></div>
-        <div class="fee"><small>FEES</small><b>KSh 24K</b></div>
+        <div class="fee"><small>Fees</small><b>KSh 24K</b></div>
         <div class="body">
-          <span class="eyebrow sky">Driving</span>
+          <span class="eyebrow sky">Driving programme</span>
           <h3>Professional Driving</h3>
           <p>Weekday and weekend classes that make you a confident, defensive driver on Nairobi roads.</p>
-          <div class="chips"><span>3 months</span><span>Certificate</span><span>Weekday · Weekend</span></div>
-          <a class="go" href="#apply">Programme details →</a>
+          <div class="chips"><span>3 months</span><span>Certificate</span><span>Weekday or weekend</span></div>
+          <a class="go" href="#apply">Programme details</a>
         </div>
       </article>
       <article class="prog cocoa">
         <div class="media"><img src="../img/barista-pour-dark.jpg" alt="A barista pours milk into a latte" loading="lazy"></div>
-        <div class="fee"><small>FEES</small><b>KSh 32K</b></div>
+        <div class="fee"><small>Fees</small><b>KSh 32K</b></div>
         <div class="body">
-          <span class="eyebrow cocoa">Barista</span>
+          <span class="eyebrow cocoa">Barista programme</span>
           <h3>Barista &amp; Coffee Arts</h3>
           <p>Espresso, milk texturing and latte art on commercial machines. Get hired in cafés and hotels.</p>
-          <div class="chips"><span>4 months</span><span>Certificate</span><span>Morning · Evening · Weekend</span></div>
-          <a class="go" href="#apply">Programme details →</a>
+          <div class="chips"><span>4 months</span><span>Certificate</span><span>Morning, evening or weekend</span></div>
+          <a class="go" href="#apply">Programme details</a>
         </div>
       </article>
     </div>
@@ -485,9 +485,9 @@ p{margin:0}
       <a class="btn" href="#news">All news &amp; events</a>
     </div>
     <div class="news-grid">
-      <article class="news"><span class="date ev">Event · 15 Nov 2026</span><h3>Brightwit Open Day</h3><p>Tour the campus, meet the trainers and try a makeup look, latte art and a driving simulation.</p><a href="#news">Read more →</a></article>
-      <article class="news"><span class="date">News · 5 Dec 2026</span><h3>Early-bird discount closes</h3><p>Apply before 5 December 2026 and save on your enrolment for the January intake.</p><a href="#news">Read more →</a></article>
-      <article class="news"><span class="date">News · 12 Jan 2027</span><h3>January 2027 intake begins</h3><p>Classes for the new academic year start on 12 January for all three programmes.</p><a href="#news">Read more →</a></article>
+      <article class="news"><span class="date ev">Event, 15 Nov 2026</span><h3>Brightwit Open Day</h3><p>Tour the campus, meet the trainers and try a makeup look, latte art and a driving simulation.</p><a href="#news">Read more</a></article>
+      <article class="news"><span class="date">News, 5 Dec 2026</span><h3>Early-bird discount closes</h3><p>Apply before 5 December 2026 and save on your enrolment for the January intake.</p><a href="#news">Read more</a></article>
+      <article class="news"><span class="date">News, 12 Jan 2027</span><h3>January 2027 intake begins</h3><p>Classes for the new academic year start on 12 January for all three programmes.</p><a href="#news">Read more</a></article>
     </div>
   </div>
 </section>
@@ -532,9 +532,9 @@ p{margin:0}
     </div>
     <div><h4>Programmes</h4><ul><li><a href="#programmes">Beauty &amp; Cosmetology</a></li><li><a href="#programmes">Professional Driving</a></li><li><a href="#programmes">Barista &amp; Coffee Arts</a></li></ul></div>
     <div><h4>College</h4><ul><li><a href="#why">About us</a></li><li><a href="#apply">Admissions</a></li><li><a href="#news">News &amp; events</a></li><li><a href="#gallery">Gallery</a></li></ul></div>
-    <div><h4>Admissions office</h4><ul><li>Kony House, Ngong Road, Ngong</li><li>P.O. Box 13597-00100, Nairobi</li><li>+254 715 798294 · +254 758 495577</li><li>admissions@brightwitcollege.co.ke</li><li>Mon–Sat, 8:00 AM – 5:00 PM</li></ul></div>
+    <div><h4>Admissions office</h4><ul><li>Kony House, Ngong Road, Ngong</li><li>P.O. Box 13597-00100, Nairobi</li><li>+254 715 798294</li><li>+254 758 495577</li><li>admissions@brightwitcollege.co.ke</li><li>Mon–Sat, 8:00 AM – 5:00 PM</li></ul></div>
   </div>
-  <div class="legal"><div class="wrap"><span>© 2026 Brightwit College of Professional Studies.</span><span>Registered Vocational Training Centre · TVETA/PRIVATE/TVC/0138/2026</span></div></div>
+  <div class="legal"><div class="wrap"><span>© 2026 Brightwit College of Professional Studies.</span><span>Registered Vocational Training Centre, TVETA/PRIVATE/TVC/0138/2026</span></div></div>
 </footer>
 
 <nav class="concept-bar" aria-label="Design concepts"><a href="../">All concepts</a><b>2 / 5</b><span class="l">Jua</span><a class="nx" href="../concept-3/">Next concept</a></nav>

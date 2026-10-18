@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#f7f6f3">
+<title>Brightwit College — Website design concepts</title>
+<meta name="description" content="Five website and brand directions proposed for Brightwit College of Professional Studies.">
+<link rel="icon" href="data:,">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,500;1,6..72,400&family=Public+Sans:wght@400;600&family=Bricolage+Grotesque:opsz,wght@12..96,800&family=Figtree:wght@400;600&family=Cormorant+Garamond:ital,wght@0,500;1,400&family=Jost:wght@300;500&family=Gabarito:wght@700;800&family=Nunito+Sans:wght@400;600&family=Sora:wght@600;700&family=Hanken+Grotesk:wght@400;500&display=swap">
+<style>
+:root{--bg:#f7f6f3;--card:#ffffff;--ink:#1b1b1f;--muted:#5f6168;--line:#e2e0da;--font:"Instrument Sans","Segoe UI","Helvetica Neue",Arial,sans-serif;--gl:max(16px,env(safe-area-inset-left,0px));--gr:max(16px,env(safe-area-inset-right,0px))}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3{margin:0;line-height:1.1;text-wrap:balance;letter-spacing:-.02em}
+p{margin:0}
+.wrap{max-width:1120px;margin-inline:auto;padding-left:var(--gl);padding-right:var(--gr)}
+:focus-visible{outline:3px solid #1b1b1f;outline-offset:3px}
+.top{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-block:22px;border-bottom:1px solid var(--line);font-size:14px;color:var(--muted)}
+.top b{color:var(--ink);font-weight:600}
+.hero{padding-block:56px 36px}
+.hero h1{font-size:clamp(34px,5vw,58px);max-width:18ch}
+.hero p{color:var(--muted);font-size:18px;max-width:64ch;margin-top:18px}
+.hero .how{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:30px}
+.hero .how div{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px;font-size:14.5px}
+.hero .how b{display:block;font-weight:600;margin-bottom:4px}
+.concepts{display:flex;flex-direction:column;gap:36px;padding-block:28px 56px}
+.board{background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden;transition:box-shadow .3s,transform .3s}
+.board:hover{box-shadow:0 24px 60px -36px rgba(27,27,31,.35);transform:translateY(-2px)}
+.board .shot{display:block;position:relative;aspect-ratio:16/9;overflow:hidden;background:#e9e7e2;border-bottom:1px solid var(--line)}
+.board .shot img{width:100%;height:100%;object-fit:cover;object-position:top;transition:transform 6s ease}
+.board:hover .shot img{transform:translateY(-12%)}
+.board .shot span{position:absolute;left:16px;bottom:16px;background:rgba(27,27,31,.86);color:#fff;font-size:13px;font-weight:600;padding:8px 12px;border-radius:999px}
+.board .grid{display:grid;grid-template-columns:1fr 1.15fr}
+.board .preview{padding:28px;display:flex;flex-direction:column;justify-content:space-between;gap:22px;min-height:300px}
+.board .info{padding:30px 32px 28px;border-left:1px solid var(--line);display:flex;flex-direction:column;gap:18px;min-width:0}
+.board .num{font-size:13px;color:var(--muted);font-weight:600}
+.board h2{font-size:30px;margin-top:4px}
+.board .mood{font-size:16.5px;color:var(--muted);margin-top:8px}
+.board dl{display:grid;grid-template-columns:104px 1fr;gap:10px 14px;margin:0;font-size:14.5px;border-top:1px solid var(--line);padding-top:16px}
+.board dt{color:var(--muted);font-weight:600}
+.board dd{margin:0}
+.board .fit{font-size:14.5px;border-top:1px solid var(--line);padding-top:14px}
+.board .fit b{font-weight:600}
+.board .open{display:inline-flex;align-items:center;gap:10px;align-self:flex-start;background:var(--ink);color:#fff;text-decoration:none;font-weight:600;padding:13px 20px;border-radius:999px;font-size:15px;margin-top:auto;transition:transform .15s,opacity .2s}
+.board .open:hover{opacity:.9;transform:translateY(-1px)}
+.board .open:active{transform:scale(.97)}
+.swatches{display:flex;gap:8px;flex-wrap:wrap}
+.sw{flex:1 1 56px;min-width:56px}
+.sw i{display:block;height:40px;border-radius:8px;border:1px solid rgba(0,0,0,.08)}
+.sw span{display:block;font-size:11px;margin-top:6px;opacity:.9}
+.logo-row{display:flex;align-items:center;gap:14px}
+.logo-row svg{flex:none}
+.type .big{font-size:30px;line-height:1.05}
+.type .small{font-size:14.5px;opacity:.85;margin-top:6px}
+.p1{background:#fff;color:#15171c;border-top:6px solid #b3121c}.p1 .big{font-family:Newsreader,Georgia,serif;font-weight:500}.p1 .small{font-family:"Public Sans",Arial,sans-serif}
+.p2{background:#ffc72c;color:#141a33}.p2 .big{font-family:"Bricolage Grotesque","Arial Black",sans-serif;font-weight:800;letter-spacing:-.03em}.p2 .small{font-family:Figtree,Arial,sans-serif}
+.p3{background:#141110;color:#f3ece2}.p3 .big{font-family:"Cormorant Garamond",Georgia,serif;font-weight:500}.p3 .small{font-family:Jost,Arial,sans-serif;font-weight:300}.p3 .sw i{border-color:rgba(255,255,255,.15)}
+.p4{background:linear-gradient(135deg,#dcd3ff 0%,#ffd9c2 55%,#bfebd8 100%);color:#1f2340}.p4 .big{font-family:Gabarito,"Segoe UI",sans-serif;font-weight:800;letter-spacing:-.02em}.p4 .small{font-family:"Nunito Sans",Arial,sans-serif}
+.p5{background:#f7faff;color:#0b2a6b;border-top:6px solid #d6f25a}.p5 .big{font-family:Sora,"Segoe UI",sans-serif;font-weight:700;letter-spacing:-.02em}.p5 .small{font-family:"Hanken Grotesk",Arial,sans-serif}
+.shared{padding-block:8px 64px}
+.shared h2{font-size:26px;margin-bottom:18px}
+.shared .cells{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.shared .cell{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 20px}
+.shared .cell b{display:block;font-weight:600;margin-bottom:6px}
+.shared .cell p{font-size:14.5px;color:var(--muted)}
+.foot{border-top:1px solid var(--line);padding-block:22px;font-size:13px;color:var(--muted);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+@media(max-width:860px){.board .grid{grid-template-columns:1fr}.board .info{border-left:0;border-top:1px solid var(--line)}.shared .cells{grid-template-columns:1fr}.hero .how{grid-template-columns:1fr}.board .preview{min-height:0}}
+@media(max-width:520px){.board dl{grid-template-columns:1fr}.board .info{padding:22px 20px}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top"><span><b>Brightwit College of Professional Studies</b> · Website redesign</span><span>Design concepts for review</span></div>
+</div>
+
+<section class="hero">
+  <div class="wrap">
+    <h1>Five directions for the new Brightwit website</h1>
+    <p>Each one is a working homepage you can open on your phone or laptop and scroll through. Each also proposes a brand identity for the college (logo mark, colours, typefaces), since there are no brand guidelines yet. Choose the direction you like most and we build the full site, admin included, in that style. Mixing the layout of one with the colours of another is fine too.</p>
+    <div class="how">
+      <div><b>How to review</b>Open each concept, scroll to the bottom, hover and tap things. The small switcher at the bottom right moves you to the next concept.</div>
+      <div><b>What to judge</b>Does it feel like Brightwit? Would a 20-year-old on a phone trust it and apply? Would a parent or an employer?</div>
+      <div><b>What is not final</b>Wording, photos and dates can all change. Links inside the pages are placeholders until the full build.</div>
+    </div>
+  </div>
+</section>
+
+<section class="concepts">
+  <div class="wrap" style="display:flex;flex-direction:column;gap:36px">
+
+    <article class="board" id="c1">
+      <a class="shot" href="concept-1/"><img src="img/shots/concept-1.jpg" alt="Concept 1 homepage preview" width="1400" height="788" loading="lazy"><span>Open Concept 1</span></a>
+      <div class="grid">
+        <div class="preview p1">
+          <div class="logo-row">
+            <svg width="52" height="52" viewBox="0 0 48 48" aria-hidden="true"><polygon points="24,2 46,24 24,46 2,24" fill="#8c919a"/><polygon points="24,2 46,24 24,24" fill="#a7abb2"/><polygon points="46,24 24,46 24,24" fill="#b3121c"/><polygon points="24,46 2,24 24,24" fill="#8a0d15"/><text x="24" y="31" text-anchor="middle" font-family="Newsreader, Georgia, serif" font-size="22" font-weight="600" fill="#fff">B</text></svg>
+            <div><div style="font-family:Newsreader,Georgia,serif;font-size:26px;font-weight:600;color:#3b4049;line-height:1">Brightwit</div><div style="font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#b3121c;font-weight:700;margin-top:5px;font-family:'Public Sans',Arial,sans-serif">College of Professional Studies</div></div>
+          </div>
+          <div class="type"><div class="big">Practical skills. Real careers.</div><div class="small">Newsreader headlines, Public Sans text. Diamond mark, serif wordmark.</div></div>
+          <div class="swatches"><div class="sw"><i style="background:#b3121c"></i><span>Crimson</span></div><div class="sw"><i style="background:#15171c"></i><span>Ink</span></div><div class="sw"><i style="background:#3b4049"></i><span>Slate</span></div><div class="sw"><i style="background:#a7abb2"></i><span>Silver</span></div><div class="sw"><i style="background:#f4f4f6"></i><span>Paper</span></div></div>
+        </div>
+        <div class="info">
+          <div><div class="num">Concept 1</div><h2>Crimson Standard</h2><p class="mood">Established, trustworthy, institutional. The college as a serious registered training centre.</p></div>
+          <dl>
+            <dt>Brand idea</dt><dd>Extends the Brightlink Recruitment diamond into a family identity: the same crimson and grey, a serif B inside a four-facet diamond, so the two companies look related.</dd>
+            <dt>Layout</dt><dd>Sharp corners, strong rules, a structured grid. Large photo frames, a dark student-support band, a calendar panel for the intake.</dd>
+            <dt>Motion</dt><dd>Headline rises word by word, the hero photo wipes in, numbers count up, programme cards unveil from the bottom, step numbers turn crimson as you pass them. Buttons fill with a sweep on hover.</dd>
+          </dl>
+          <p class="fit"><b>Best if</b> credibility with parents, employers and regulators matters most, and you want Brightwit and Brightlink to share a visual family.</p>
+          <a class="open" href="concept-1/">Open Concept 1</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="board" id="c2">
+      <a class="shot" href="concept-2/"><img src="img/shots/concept-2.jpg" alt="Concept 2 homepage preview" width="1400" height="788" loading="lazy"><span>Open Concept 2</span></a>
+      <div class="grid">
+        <div class="preview p2">
+          <div class="logo-row">
+            <svg width="52" height="52" viewBox="0 0 48 48" aria-hidden="true"><g stroke="#141a33" stroke-width="3" stroke-linecap="round"><path d="M24 2v5M24 41v5M2 24h5M41 24h5M8.4 8.4l3.6 3.6M36 36l3.6 3.6M8.4 39.6L12 36M36 12l3.6-3.6"/></g><circle cx="24" cy="24" r="13" fill="#141a33"/><text x="24" y="30.5" text-anchor="middle" font-family="Bricolage Grotesque, Arial Black, sans-serif" font-size="19" font-weight="800" fill="#ffc72c">B</text></svg>
+            <div><div style="font-family:'Bricolage Grotesque','Arial Black',sans-serif;font-size:26px;font-weight:800;letter-spacing:-.03em;line-height:1">Brightwit.</div><div style="font-size:11px;font-weight:600;opacity:.75;margin-top:3px;font-family:Figtree,Arial,sans-serif">College of Professional Studies</div></div>
+          </div>
+          <div class="type"><div class="big">Learn a trade. Love your work.</div><div class="small">Bricolage Grotesque headlines, Figtree text. Sun mark, bold wordmark.</div></div>
+          <div class="swatches"><div class="sw"><i style="background:#ffc72c"></i><span>Sun</span></div><div class="sw"><i style="background:#141a33"></i><span>Navy</span></div><div class="sw"><i style="background:#f0634a"></i><span>Coral</span></div><div class="sw"><i style="background:#e2588f"></i><span>Beauty</span></div><div class="sw"><i style="background:#2f7cf6"></i><span>Driving</span></div><div class="sw"><i style="background:#8a4b1f"></i><span>Barista</span></div></div>
+        </div>
+        <div class="info">
+          <div><div class="num">Concept 2</div><h2>Jua</h2><p class="mood">Bright, energetic, youthful. Built for the 18 to 30 year old scrolling on a phone.</p></div>
+          <dl>
+            <dt>Brand idea</dt><dd>Jua is Swahili for sun. A sun-ray mark with a bold B, sun-yellow as the brand colour, and one signature colour per programme: rose for Beauty, sky blue for Driving, cocoa for Barista.</dd>
+            <dt>Layout</dt><dd>Bento tiles in the hero, a scrolling ticker, rounded cards with sticker fee badges, a horizontal photo strip, speech-bubble testimonials.</dd>
+            <dt>Motion</dt><dd>Tiles pop in with a spring, the ticker speeds up as you scroll, programme cards tilt in 3D under the mouse and their fee stickers wiggle, the sun badge rotates with scroll, buttons are magnetic.</dd>
+          </dl>
+          <p class="fit"><b>Best if</b> you want to stand out on social media and attract younger students who choose on feel.</p>
+          <a class="open" href="concept-2/">Open Concept 2</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="board" id="c3">
+      <a class="shot" href="concept-3/"><img src="img/shots/concept-3.jpg" alt="Concept 3 homepage preview" width="1400" height="788" loading="lazy"><span>Open Concept 3</span></a>
+      <div class="grid">
+        <div class="preview p3">
+          <div class="logo-row">
+            <svg width="56" height="56" viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="25" fill="none" stroke="#c9a24b" stroke-width="1"/><circle cx="26" cy="26" r="21.5" fill="none" stroke="#c9a24b" stroke-width=".6"/><text x="26" y="33.5" text-anchor="middle" font-family="Cormorant Garamond, Garamond, Georgia, serif" font-size="22" font-weight="600" fill="#f3ece2" letter-spacing="-1">BW</text><circle cx="26" cy="7.5" r="1" fill="#c9a24b"/><circle cx="26" cy="44.5" r="1" fill="#c9a24b"/></svg>
+            <div><div style="font-family:Jost,Arial,sans-serif;font-weight:500;font-size:14px;letter-spacing:.3em;text-transform:uppercase;line-height:1">Brightwit</div><div style="font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;font-size:16px;color:#a89e92;margin-top:5px">College of Professional Studies</div></div>
+          </div>
+          <div class="type"><div class="big">Master a craft. Earn your place.</div><div class="small">Cormorant Garamond headlines, Jost text. Seal monogram, spaced capitals.</div></div>
+          <div class="swatches"><div class="sw"><i style="background:#141110"></i><span>Espresso</span></div><div class="sw"><i style="background:#1d1917"></i><span>Surface</span></div><div class="sw"><i style="background:#c9a24b"></i><span>Brass</span></div><div class="sw"><i style="background:#f3ece2"></i><span>Ivory</span></div><div class="sw"><i style="background:#a89e92"></i><span>Stone</span></div></div>
+        </div>
+        <div class="info">
+          <div><div class="num">Concept 3</div><h2>Atelier</h2><p class="mood">Premium, photographic, aspirational. Beauty and coffee as crafts worth mastering.</p></div>
+          <dl>
+            <dt>Brand idea</dt><dd>A refined seal monogram (BW in a double ring) that nods to the crest already on the student T-shirts. Dark espresso ground, ivory type, brass hairlines.</dd>
+            <dt>Layout</dt><dd>Full-bleed hero portrait, three tall programme panels that reveal detail on hover, an editorial about spread, Roman-numbered admissions timeline, masonry gallery, an ivory closing section.</dd>
+            <dt>Motion</dt><dd>Smooth scrolling, a slow push-in on the hero portrait that also follows the mouse, headline words sharpen out of a blur, a soft brass glow follows the cursor, the timeline draws itself as you scroll, the header hides on the way down and returns on the way up.</dd>
+          </dl>
+          <p class="fit"><b>Best if</b> you want to price the programmes as premium and position Brightwit above the typical vocational college.</p>
+          <a class="open" href="concept-3/">Open Concept 3</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="board" id="c4">
+      <a class="shot" href="concept-4/"><img src="img/shots/concept-4.jpg" alt="Concept 4 homepage preview" width="1400" height="788" loading="lazy"><span>Open Concept 4</span></a>
+      <div class="grid">
+        <div class="preview p4">
+          <div class="logo-row">
+            <svg width="52" height="52" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="12" r="10" fill="#bfebd8"/><circle cx="36" cy="24" r="10" fill="#ffd9c2"/><circle cx="24" cy="36" r="10" fill="#dcd3ff"/><circle cx="12" cy="24" r="10" fill="#bfebd8"/><circle cx="24" cy="24" r="7" fill="#f04e4e"/></svg>
+            <div><div style="font-family:Gabarito,'Segoe UI',sans-serif;font-size:26px;font-weight:800;letter-spacing:-.02em;line-height:1">Brightwit</div><div style="font-size:11px;font-weight:600;opacity:.75;margin-top:3px;font-family:'Nunito Sans',Arial,sans-serif">College of Professional Studies</div></div>
+          </div>
+          <div class="type"><div class="big">Start the career you'll actually enjoy.</div><div class="small">Gabarito headlines, Nunito Sans text. Four pastel petals around a coral centre.</div></div>
+          <div class="swatches"><div class="sw"><i style="background:#bfebd8"></i><span>Mint</span></div><div class="sw"><i style="background:#ffd9c2"></i><span>Peach</span></div><div class="sw"><i style="background:#dcd3ff"></i><span>Lilac</span></div><div class="sw"><i style="background:#f04e4e"></i><span>Coral</span></div><div class="sw"><i style="background:#1f2340"></i><span>Ink</span></div></div>
+        </div>
+        <div class="info">
+          <div><div class="num">Concept 4</div><h2>Bloom</h2><p class="mood">Soft, warm and lovely. Pastel grounds, rounded shapes, a friendly voice.</p></div>
+          <dl>
+            <dt>Brand idea</dt><dd>Four pastel petals (mint, peach, lilac) around a coral centre: the three programmes around one college. Each programme owns one pastel, and coral is reserved for buttons and links so the page stays calm.</dd>
+            <dt>Layout</dt><dd>A centred headline surrounded by floating photo cards, soft curved section edges, large pastel programme cards, a vertical admissions list with a line that draws itself.</dd>
+            <dt>Motion</dt><dd>The floating cards drift with the mouse and bob gently at rest, pastel shapes move slowly with scroll, the headline rises word by word on load, cards tilt softly under the mouse, the admissions line draws as you scroll.</dd>
+          </dl>
+          <p class="fit"><b>Best if</b> you want the warmest, most approachable feel, especially for the Beauty programme and for women applicants.</p>
+          <a class="open" href="concept-4/">Open Concept 4</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="board" id="c5">
+      <a class="shot" href="concept-5/"><img src="img/shots/concept-5.jpg" alt="Concept 5 homepage preview" width="1400" height="788" loading="lazy"><span>Open Concept 5</span></a>
+      <div class="grid">
+        <div class="preview p5">
+          <div class="logo-row">
+            <svg width="52" height="52" viewBox="0 0 32 32" aria-hidden="true"><path d="M5 30V16A11 11 0 0 1 27 16v14z" fill="#0B2A6B"/><circle cx="16" cy="17" r="4.2" fill="#D6F25A"/></svg>
+            <div><div style="font-family:Sora,'Segoe UI',sans-serif;font-size:24px;font-weight:700;letter-spacing:-.02em;line-height:1">Brightwit</div><div style="font-size:11px;font-weight:500;opacity:.75;margin-top:3px;font-family:'Hanken Grotesk',Arial,sans-serif">College of Professional Studies</div></div>
+          </div>
+          <div class="type"><div class="big">Trained for real work, in Nairobi.</div><div class="small">Sora headlines, Hanken Grotesk text. Arch mark with a single lime point.</div></div>
+          <div class="swatches"><div class="sw"><i style="background:#0b2a6b"></i><span>Deep blue</span></div><div class="sw"><i style="background:#3a9bf2"></i><span>Sky</span></div><div class="sw"><i style="background:#d6f25a"></i><span>Lime</span></div><div class="sw"><i style="background:#e3effd"></i><span>Tint</span></div><div class="sw"><i style="background:#f7faff"></i><span>Cloud</span></div></div>
+        </div>
+        <div class="info">
+          <div><div class="num">Concept 5</div><h2>Anga</h2><p class="mood">Bright, airy and confident. Anga is Swahili for sky.</p></div>
+          <dl>
+            <dt>Brand idea</dt><dd>An arch (a doorway, a window onto the Nairobi sky) in deep blue and sky blue with a single lime point. Lime is used only for the one thing to tap on each screen.</dd>
+            <dt>Layout</dt><dd>Left-aligned hero beside a tall arch-topped photo, a scroll-driven programme story where the picture changes as each programme reaches the middle of the screen, a horizontal gallery that scrolls sideways with the wheel, a quote ticker.</dd>
+            <dt>Motion</dt><dd>A lime progress line tracks your scroll, the programme photo crossfades as you move through the list, the admissions line fills as you pass each step, the quote ticker speeds up with your scroll and pauses on hover, the header hides and returns.</dd>
+          </dl>
+          <p class="fit"><b>Best if</b> you want a modern, clean look with one strong interactive moment that makes the three programmes memorable.</p>
+          <a class="open" href="concept-5/">Open Concept 5</a>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="shared">
+  <div class="wrap">
+    <h2>What is the same in all five</h2>
+    <div class="cells">
+      <div class="cell"><b>Your photos and your name</b><p>The campus and student photos you shared are in every concept, with the full name Brightwit College of Professional Studies. Extra imagery shows Kenyan and African subjects only.</p></div>
+      <div class="cell"><b>TVETA registration, front and centre</b><p>Registered Vocational Training Centre, TVETA/PRIVATE/TVC/0138/2026, appears near the top, in the about section and in the footer of every concept.</p></div>
+      <div class="cell"><b>Corrected intake calendar</b><p>The current site lists a January 2026 intake with a December 2026 deadline. All concepts show the next real intake: Open Day 15 Nov 2026, deadline 5 Dec 2026, classes from 12 Jan 2027.</p></div>
+      <div class="cell"><b>Same content, same admin</b><p>Programmes, news and events, testimonials, gallery, messages and settings stay fully manageable from the admin, whichever design you pick.</p></div>
+      <div class="cell"><b>Phone-first and accessible</b><p>Every layout is built for phones first. Menus collapse, grids stack, galleries scroll with a thumb, and all motion switches off for people who turn off animations on their device.</p></div>
+      <div class="cell"><b>Mix and match</b><p>If you like the layout of one and the colours of another, say so. The identity and the layout can be combined.</p></div>
+    </div>
+  </div>
+</section>
+
+<footer class="wrap"><div class="foot"><span>Prepared for Gilbert, Brightwit College of Professional Studies</span><span>Digital Tailor Agency · 2026</span></div></footer>
+</body>
+</html>
