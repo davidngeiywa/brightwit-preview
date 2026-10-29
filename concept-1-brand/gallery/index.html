@@ -1,0 +1,628 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#021c45">
+<title>Inside Brightwit — Gallery</title>
+<meta name="description" content="Photos and videos from Brightwit College of Professional Studies, Ngong: the campus, Cosmetology &amp; Beauty Therapy, Barista &amp; Mixology, the Driving School and Languages.">
+<link rel="icon" href="../../img/brightwit-crest-160.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Public+Sans:wght@400;500;600;700&display=swap">
+<style>
+/* Layout concept: a photo book with one chapter per school. Each chapter gets its own layout and its own kind of motion, so the page never repeats itself. Brand palette from the homepage; the Barista chapter turns coffee brown. */
+:root{
+  --paper:#ffffff; --paper-2:#f3f7fc; --paper-3:#e6eef8; --sky:#ddeefe;
+  --ink:#0d1a33; --slate:#3f4b63; --silver:#7d879c; --line:#d3dce9;
+  --navy:#052c66; --navy-deep:#021c45; --navy-line:#1b3f7e;
+  --blue:#0a6ad1; --blue-deep:#064fa6; --blue-tint:#e8f2fd;
+  --gold:#c9a24b;
+  --coffee:#6b4423; --coffee-deep:#4a2d15; --coffee-tint:#f4ebe2;
+  --wa:#1fb257;
+  --font-display:"Newsreader","Georgia","Times New Roman",serif;
+  --font-body:"Public Sans","Segoe UI","Helvetica Neue",Arial,sans-serif;
+  --gutter-l:max(16px, env(safe-area-inset-left, 0px));
+  --gutter-r:max(16px, env(safe-area-inset-right, 0px));
+  --wrap:1180px;
+  --header-h:84px;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--font-body);font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:clip}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--navy-deep)}
+img,video{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+h1,h2,h3,h4{font-family:var(--font-display);font-weight:500;line-height:1.08;margin:0;text-wrap:balance;letter-spacing:-.01em}
+p{margin:0}
+.wrap{max-width:var(--wrap);margin-inline:auto;padding-left:var(--gutter-l);padding-right:var(--gutter-r)}
+.eyebrow{font-size:14px;font-weight:600;color:var(--blue)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:14px 22px;min-height:48px;font-weight:600;font-size:15px;border:1.5px solid var(--navy);color:var(--navy);background:transparent;cursor:pointer;font-family:inherit;position:relative;overflow:hidden;isolation:isolate;transition:color .25s,border-color .25s,transform .15s}
+.btn::before{content:"";position:absolute;inset:0;background:var(--navy);transform:translateX(-101%);transition:transform .35s cubic-bezier(.2,.7,.2,1);z-index:-1}
+.btn:hover{color:#fff}
+.btn:hover::before{transform:translateX(0)}
+.btn:active{transform:scale(.98)}
+.btn-primary{background:var(--blue);border-color:var(--blue);color:#fff}
+.btn-primary::before{background:var(--blue-deep)}
+.btn-light{border-color:#fff;color:#fff}
+.btn-light::before{background:#fff}
+.btn-light:hover{color:var(--navy)}
+.btn svg{width:16px;height:16px}
+:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;scroll-behavior:auto}}
+
+/* header (same as the homepage) */
+.header{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:rgba(255,255,255,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);transition:box-shadow .3s}
+.header .progress{position:absolute;left:0;top:0;height:3px;width:100%;background:var(--blue);transform-origin:0 50%;transform:scaleX(0)}
+.header .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px;min-height:var(--header-h);transition:min-height .3s}
+.header.is-scrolled{box-shadow:0 10px 30px -22px rgba(5,44,102,.45)}
+.header.is-scrolled .wrap{min-height:68px}
+.brand{display:flex;align-items:center;gap:12px}
+.brand .mark{width:52px;height:52px;flex:none;transition:transform .4s cubic-bezier(.2,.7,.2,1)}
+.brand:hover .mark{transform:rotate(-8deg) scale(1.04)}
+.brand .name{font-family:var(--font-display);font-size:26px;font-weight:600;line-height:1;color:var(--navy);letter-spacing:-.01em}
+.brand>span{display:flex;flex-direction:column}
+.brand .sub{font-size:11.5px;letter-spacing:.06em;color:var(--blue);font-weight:600;margin-top:4px}
+.nav{display:flex;gap:26px;align-items:center;font-weight:500;font-size:15px}
+.nav a{padding:6px 0;position:relative}
+.nav a::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2px;background:var(--blue);transform:scaleX(0);transform-origin:left;transition:transform .3s cubic-bezier(.2,.7,.2,1)}
+.nav a:hover::after,.nav a:focus-visible::after,.nav a.is-here::after{transform:scaleX(1)}
+.nav a.btn::after{display:none}
+.header .cta{display:flex;gap:10px;align-items:center}
+.menu-btn{display:none;background:none;border:1.5px solid var(--line);width:44px;height:44px;cursor:pointer;align-items:center;justify-content:center}
+.menu-btn span{display:block;width:20px;height:2px;background:var(--navy);box-shadow:0 -6px 0 var(--navy),0 6px 0 var(--navy)}
+.nav .btn{display:none}
+@media(max-width:1020px){
+  .nav{display:none}
+  .header .cta .btn{display:none}
+  .menu-btn{display:flex}
+  .nav.open{display:flex;position:absolute;left:0;right:0;top:100%;flex-direction:column;align-items:stretch;gap:0;background:#fff;border-bottom:1px solid var(--line);padding:8px var(--gutter-r) 16px var(--gutter-l)}
+  .nav.open a{padding:14px 0;border-bottom:1px solid var(--line);font-size:17px}
+  .nav.open .btn{display:inline-flex;margin-top:14px;border-bottom:1.5px solid var(--blue)}
+}
+
+/* cover: navy ground, blurred campus still behind, the college's own phone video in a reel frame */
+.cover{position:relative;background:var(--navy-deep);color:#fff;overflow:hidden}
+.cover .bg{position:absolute;inset:-6%;background:url(../../video/campus-01.jpg) center/cover;filter:blur(28px) saturate(.8);opacity:.35;will-change:transform}
+.cover .shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(2,28,69,.92) 0%,rgba(2,28,69,.6) 60%,rgba(2,28,69,.35) 100%)}
+.cover .wrap{position:relative;display:grid;grid-template-columns:7fr 5fr;gap:40px;align-items:center;min-height:min(calc(100svh - var(--header-h) - env(safe-area-inset-top,0px)),780px);padding-block:56px}
+.cover .reel-frame{justify-self:end;position:relative;width:min(100%,340px);aspect-ratio:9/16;max-width:100%;overflow:hidden;background:#000;box-shadow:0 40px 90px -30px rgba(0,0,0,.8),0 0 0 1px rgba(255,255,255,.12);transform-origin:50% 60%}
+.cover .reel-frame video,.cover .reel-frame .poster{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.cover .reel-frame .tag{position:absolute;left:0;bottom:0;right:0;padding:40px 14px 12px;background:linear-gradient(0deg,rgba(2,28,69,.9),rgba(2,28,69,0));font-size:13px;font-weight:600;display:flex;justify-content:space-between;align-items:center}
+.cover .reel-frame .tag i{width:8px;height:8px;border-radius:50%;background:#ff4d4d;display:inline-block;margin-right:8px;box-shadow:0 0 0 3px rgba(255,77,77,.3)}
+.cover .reel-frame .crest{position:absolute;right:-18px;top:-18px;width:72px;height:72px;filter:drop-shadow(0 10px 20px rgba(0,0,0,.5))}
+.cover .eyebrow{color:#8fc1ff}
+.cover h1{font-size:clamp(44px,7vw,96px);margin-top:12px;max-width:12ch}
+.cover h1 em{font-style:italic;font-weight:400}
+.cover p{color:#d5e0f3;font-size:18px;max-width:52ch;margin-top:18px}
+.cover .meta{display:flex;gap:26px;flex-wrap:wrap;margin-top:28px;font-size:14px;color:#b9c7e0}
+.cover .meta b{color:#fff;font-family:var(--font-display);font-size:30px;font-weight:500;display:block;line-height:1;margin-bottom:4px;font-variant-numeric:tabular-nums}
+.cover .scroll{position:absolute;left:var(--gutter-l);bottom:22px;display:flex;flex-direction:column;align-items:center;gap:10px;font-size:12px;letter-spacing:.08em;color:#b9c7e0}
+.cover .scroll i{width:1px;height:48px;background:#8fc1ff;transform-origin:top;display:block}
+.motion-on .cover .scroll i{animation:drop 1.8s cubic-bezier(.2,.7,.2,1) infinite}
+@keyframes drop{0%{transform:scaleY(0)}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+.cover .mute{position:absolute;left:var(--gutter-l);top:18px;z-index:3;background:rgba(2,28,69,.55);color:#fff;border:1px solid rgba(255,255,255,.35);font:inherit;font-size:13px;font-weight:600;padding:8px 12px;min-height:40px;display:inline-flex;gap:8px;align-items:center;cursor:pointer;backdrop-filter:blur(6px)}
+.cover .mute svg{width:16px;height:16px;stroke:#fff;fill:none;stroke-width:1.8}
+@media(max-width:900px){.cover .wrap{grid-template-columns:1fr;gap:32px;min-height:0;padding-block:40px 48px}.cover .reel-frame{justify-self:center;width:min(100%,280px)}.cover .scroll{display:none}}
+
+/* chapter nav */
+.chapters{position:sticky;top:calc(env(safe-area-inset-top,0px) + 68px);z-index:40;background:rgba(255,255,255,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.chapters .wrap{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none;position:relative;-webkit-overflow-scrolling:touch}
+.chapters .wrap::-webkit-scrollbar{display:none}
+.chapters a{flex:none;padding:16px 14px;font-size:14px;font-weight:600;color:var(--slate);position:relative;white-space:nowrap;transition:color .2s;min-height:48px;display:inline-flex;align-items:center;gap:8px}
+.chapters a small{font-weight:600;color:var(--silver);font-variant-numeric:tabular-nums}
+.chapters a:hover,.chapters a.is-active{color:var(--navy)}
+.chapters a[data-ch="barista"].is-active{color:var(--coffee)}
+.chapters .ind{position:absolute;left:0;bottom:-1px;height:3px;width:0;background:var(--blue);transition:background .3s}
+.chapters .ind.coffee{background:var(--coffee)}
+
+/* chapter common */
+.chapter{padding-block:96px}
+.chapter-head{display:grid;grid-template-columns:1fr auto;gap:24px;align-items:end;margin-bottom:40px}
+.chapter-head h2{font-size:clamp(36px,4.2vw,56px);margin-top:12px}
+.chapter-head p{color:var(--slate);font-size:17px;max-width:50ch;margin-top:14px}
+.chapter-head .count{font-family:var(--font-display);font-size:48px;font-weight:400;color:var(--line);line-height:1;font-variant-numeric:tabular-nums;white-space:nowrap}
+.chapter-head .count b{font-weight:500;color:var(--navy)}
+@media(max-width:700px){.chapter{padding-block:64px}.chapter-head{grid-template-columns:1fr}.chapter-head .count{font-size:36px}}
+.tile{position:relative;overflow:hidden;background:var(--paper-3);cursor:pointer;display:block;max-width:100%}
+.tile img{width:100%;height:100%;object-fit:cover;transition:transform .9s cubic-bezier(.2,.7,.2,1),filter .6s;will-change:transform}
+.tile:hover img{transform:scale(1.06)}
+.tile .cap{position:absolute;left:0;right:0;bottom:0;color:#fff;font-size:13px;padding:34px 14px 12px;letter-spacing:.02em;background:linear-gradient(0deg,rgba(2,28,69,.85),rgba(2,28,69,0));transform:translateY(100%);transition:transform .45s cubic-bezier(.2,.7,.2,1);display:flex;justify-content:space-between;align-items:center;gap:10px}
+.tile .cap small{font-weight:600;color:#8fc1ff;letter-spacing:.06em;font-size:11px}
+.tile:hover .cap,.tile:focus-visible .cap{transform:translateY(0)}
+.tile::after{content:"";position:absolute;inset:0;box-shadow:inset 0 0 0 0 var(--blue);transition:box-shadow .3s;pointer-events:none}
+.tile:hover::after{box-shadow:inset 0 0 0 3px var(--blue)}
+
+/* 1. campus: mosaic with wipe reveals and inner parallax */
+.mosaic{display:grid;grid-template-columns:repeat(6,1fr);grid-auto-rows:200px;gap:12px;grid-template-areas:"a a a p p q" "a a a p p q" "r r b b b q" "r r c c c c"}
+.mosaic .t-a{grid-area:a}.mosaic .t-b{grid-area:b}.mosaic .t-c{grid-area:c}.mosaic .t-p{grid-area:p}.mosaic .t-q{grid-area:q}.mosaic .t-r{grid-area:r}
+.mosaic .tile img{height:118%;margin-top:-9%}
+@media(max-width:900px){.mosaic{grid-template-columns:1fr 1fr;grid-auto-rows:170px;grid-template-areas:"a a" "p q" "r b" "c c"}}
+
+/* 2. beauty: spotlight stage driven by a thumbnail rail */
+.spot{display:grid;grid-template-columns:7fr 5fr;gap:28px;align-items:start}
+.spot .stage{position:relative;aspect-ratio:4/5;max-width:100%;overflow:hidden;background:var(--paper-3);cursor:pointer}
+.spot .stage img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .9s ease;will-change:transform}
+.spot .stage img.is-active{opacity:1}
+.motion-on .spot .stage img.is-active{animation:kb 9s linear forwards}
+@keyframes kb{from{transform:scale(1.02) translate(0,0)}to{transform:scale(1.14) translate(-1.5%,-2%)}}
+.spot .stage .cap{position:absolute;left:0;bottom:0;background:var(--navy);color:#fff;font-size:13px;font-weight:600;padding:10px 14px;z-index:2}
+.spot .stage .n{position:absolute;right:0;top:0;background:#fff;color:var(--navy);font-family:var(--font-display);font-size:22px;padding:8px 14px;z-index:2;font-variant-numeric:tabular-nums}
+.spot .rail{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;position:sticky;top:calc(env(safe-area-inset-top,0px) + 140px)}
+.spot .rail button{padding:0;border:0;background:var(--paper-3);aspect-ratio:1;overflow:hidden;cursor:pointer;position:relative;display:block}
+.spot .rail img{width:100%;height:100%;object-fit:cover;transition:transform .6s cubic-bezier(.2,.7,.2,1),filter .4s;filter:saturate(.6)}
+.spot .rail button::after{content:"";position:absolute;inset:0;box-shadow:inset 0 0 0 0 var(--blue);transition:box-shadow .25s}
+.spot .rail button:hover img,.spot .rail button.is-active img{transform:scale(1.08);filter:saturate(1)}
+.spot .rail button.is-active::after{box-shadow:inset 0 0 0 3px var(--blue)}
+.spot .note{grid-column:1/-1;font-size:14px;color:var(--slate);display:flex;gap:8px;align-items:center}
+.spot .note i{width:7px;height:7px;background:var(--gold);transform:rotate(45deg);flex:none}
+@media(max-width:900px){.spot{grid-template-columns:1fr}.spot .stage{aspect-ratio:4/5}.spot .rail{position:static;grid-template-columns:repeat(5,1fr);gap:6px}}
+
+/* 3. barista: a coffee-brown chapter that scrolls sideways */
+.coffee-ch{background:var(--coffee-deep);color:#fff;overflow:hidden}
+.coffee-ch .eyebrow{color:#e8c9a4}
+.coffee-ch .chapter-head p{color:#e9d9c8}
+.coffee-ch .chapter-head .count{color:#7a5436}.coffee-ch .chapter-head .count b{color:#fff}
+.reel{display:flex;gap:18px;padding-left:var(--gutter-l);padding-right:var(--gutter-r);width:max-content}
+.reel .panel{flex:none;width:min(62vw,720px);display:grid;grid-template-rows:auto auto;gap:14px}
+.reel .panel.tall{width:min(36vw,420px)}
+.reel .tile{aspect-ratio:16/10}
+.reel .panel.tall .tile{aspect-ratio:3/4}
+.reel .tile::after{box-shadow:inset 0 0 0 0 var(--gold)}
+.reel .tile:hover::after{box-shadow:inset 0 0 0 3px var(--gold)}
+.reel .tile .cap{background:linear-gradient(0deg,rgba(74,45,21,.9),rgba(74,45,21,0))}
+.reel .tile .cap small{color:#e8c9a4}
+.reel .line{font-family:var(--font-display);font-size:22px;line-height:1.25;color:#f4ebe2;max-width:28ch}
+.reel .line small{display:block;font-family:var(--font-body);font-size:13px;color:#c9a37e;margin-top:6px;font-weight:600}
+.reel .panel.quote{width:min(40vw,460px);display:flex;align-items:center;justify-content:center;border:1px solid #7a5436;padding:32px;text-align:left}
+.reel .panel.quote .line{font-size:clamp(24px,2.4vw,34px)}
+@media(max-width:900px){
+  .reel{width:auto;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding-bottom:6px}
+  .reel::-webkit-scrollbar{display:none}
+  .reel .panel{width:82vw;scroll-snap-align:start}
+  .reel .panel.tall{width:60vw}
+  .reel .panel.quote{width:82vw}
+}
+
+/* 4. driving: two lanes moving at different speeds */
+.lanes{display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:start}
+.lane{display:flex;flex-direction:column;gap:18px}
+.lane.b{padding-top:120px}
+.lanes .tile{aspect-ratio:4/3}
+.lanes .tile.p{aspect-ratio:3/4}
+.lanes .tile img{filter:saturate(.85)}
+.lanes .tile:hover img{filter:saturate(1.05)}
+.lane .sign{background:var(--navy);color:#fff;padding:26px 24px;font-family:var(--font-display);font-size:24px;line-height:1.2}
+.lane .sign small{display:block;font-family:var(--font-body);font-size:13px;font-weight:600;color:#8fc1ff;margin-bottom:8px}
+@media(max-width:700px){.lanes{gap:12px}.lane{gap:12px}.lane.b{padding-top:60px}}
+
+/* 5. languages: tilting cards with a glare */
+.tilts{display:grid;grid-template-columns:repeat(3,1fr);grid-auto-rows:240px;gap:14px;grid-template-areas:"p1 l1 l1" "p1 l2 l2" "l3 l3 p2" "l4 l4 p2"}
+.tilts .t-p1{grid-area:p1}.tilts .t-p2{grid-area:p2}.tilts .t-l1{grid-area:l1}.tilts .t-l2{grid-area:l2}.tilts .t-l3{grid-area:l3}.tilts .t-l4{grid-area:l4}
+.tilts .tile{transform-style:preserve-3d}
+.tilts .tile .glare{position:absolute;inset:0;background:radial-gradient(260px circle at var(--mx,50%) var(--my,50%),rgba(255,255,255,.28),transparent 60%);opacity:0;transition:opacity .3s;pointer-events:none}
+.tilts .tile:hover .glare{opacity:1}
+.tilts .tile:hover img{transform:none}
+@media(max-width:900px){.tilts{grid-template-columns:1fr 1fr;grid-auto-rows:190px;grid-template-areas:"p1 l1" "p1 l2" "l3 l3" "p2 l4"}}
+
+/* 6. video: cards that preview on hover */
+.videos{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.vcard{position:relative;aspect-ratio:9/16;overflow:hidden;background:var(--navy-deep);cursor:pointer;max-width:100%}
+.vcard video,.vcard img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.vcard video{opacity:0;transition:opacity .5s}
+.vcard.is-previewing video{opacity:1}
+.vcard .play{position:absolute;left:50%;top:50%;width:72px;height:72px;transform:translate(-50%,-50%);border-radius:50%;background:rgba(255,255,255,.92);display:grid;place-items:center;transition:transform .3s cubic-bezier(.2,.7,.2,1),background .3s;z-index:2}
+.vcard .play svg{width:26px;height:26px;fill:var(--navy);margin-left:4px}
+.vcard:hover .play{transform:translate(-50%,-50%) scale(1.1);background:var(--blue)}
+.vcard:hover .play svg{fill:#fff}
+.vcard .cap{position:absolute;left:0;right:0;bottom:0;padding:40px 16px 14px;background:linear-gradient(0deg,rgba(2,28,69,.9),rgba(2,28,69,0));color:#fff;display:flex;justify-content:space-between;align-items:end;gap:12px;z-index:2}
+.vcard .cap b{font-family:var(--font-display);font-size:22px;font-weight:500;display:block}
+.vcard .cap span{font-size:13px;color:#b9c7e0}
+.vcard .cap em{font-style:normal;font-size:12px;font-weight:600;background:rgba(255,255,255,.14);padding:4px 8px;white-space:nowrap;font-variant-numeric:tabular-nums}
+@media(max-width:900px){.videos{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.videos{grid-template-columns:1fr;max-width:340px;margin-inline:auto}}
+
+/* lightbox */
+.lb{position:fixed;inset:0;z-index:90;display:none;align-items:center;justify-content:center;padding:max(16px,env(safe-area-inset-top,0px)) var(--gutter-r) max(16px,env(safe-area-inset-bottom,0px)) var(--gutter-l);background:rgba(2,28,69,.0);backdrop-filter:blur(0px)}
+.lb.is-open{display:flex}
+.lb .shade{position:absolute;inset:0;background:rgba(2,28,69,.92)}
+.lb .media{position:relative;max-width:min(1400px,100%);max-height:100%;display:flex;align-items:center;justify-content:center;z-index:1}
+.lb .media img{max-width:100%;max-height:calc(100svh - 120px);width:auto;height:auto;object-fit:contain;box-shadow:0 30px 80px -30px rgba(0,0,0,.7);cursor:zoom-in;user-select:none;-webkit-user-drag:none}
+.lb .media img.is-zoomed{cursor:zoom-out}
+.lb .media video{max-width:100%;max-height:calc(100svh - 120px);height:calc(100svh - 120px);width:auto;background:#000;box-shadow:0 30px 80px -30px rgba(0,0,0,.7)}
+.lb .fly{position:fixed;z-index:95;object-fit:cover;pointer-events:none}
+.lb .bar{position:absolute;left:0;right:0;top:0;display:flex;justify-content:space-between;align-items:center;padding:12px var(--gutter-r) 12px var(--gutter-l);color:#fff;z-index:2;font-size:14px}
+.lb .bar .where{display:flex;gap:12px;align-items:center}
+.lb .bar .where b{font-family:var(--font-display);font-size:20px;font-weight:500;font-variant-numeric:tabular-nums}
+.lb .bar .where span{color:#b9c7e0}
+.lb button{font:inherit;color:#fff;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.25);cursor:pointer;min-width:48px;min-height:48px;display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:0 14px;transition:background .2s,transform .2s;backdrop-filter:blur(6px)}
+.lb button:hover{background:var(--blue);border-color:var(--blue)}
+.lb button svg{width:18px;height:18px;stroke:#fff;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.lb .prev,.lb .next{position:absolute;top:50%;transform:translateY(-50%);z-index:3}
+.lb .prev{left:var(--gutter-l)}.lb .next{right:var(--gutter-r)}
+.lb .caption{position:absolute;left:0;right:0;bottom:0;padding:14px var(--gutter-r) 14px var(--gutter-l);color:#fff;font-size:14px;display:flex;justify-content:space-between;gap:16px;align-items:center;z-index:2}
+.lb .caption small{color:#8fc1ff;font-weight:600;letter-spacing:.06em;font-size:11px}
+.lb .caption .keys{color:#b9c7e0;font-size:12px;display:none;gap:10px}
+.lb .caption .keys kbd{font:inherit;border:1px solid rgba(255,255,255,.3);padding:1px 6px}
+@media(pointer:fine){.lb .caption .keys{display:flex}}
+@media(max-width:700px){.lb .prev,.lb .next{top:auto;bottom:56px;transform:none}.lb .caption{bottom:0;flex-direction:column;align-items:flex-start;gap:4px;padding-bottom:110px}}
+
+/* custom cursor label (mouse only) */
+.cursor{position:fixed;left:0;top:0;z-index:80;pointer-events:none;background:var(--navy);color:#fff;font-size:12px;font-weight:600;letter-spacing:.06em;padding:8px 12px;transform:translate(-50%,-50%) scale(0);transition:transform .25s cubic-bezier(.2,.7,.2,1),background .2s;white-space:nowrap}
+.cursor.is-on{transform:translate(-50%,-50%) scale(1)}
+.cursor.coffee{background:var(--coffee)}
+@media(pointer:coarse){.cursor{display:none}}
+
+/* cta + footer */
+.cta{background:var(--blue);color:#fff;position:relative;overflow:hidden}
+.cta .bg{position:absolute;inset:-10% 0;background:url(../../img/campus-class-group-03.jpg) center/cover;opacity:.16;will-change:transform}
+.cta .wrap{display:grid;grid-template-columns:1fr auto;gap:32px;align-items:center;padding-block:72px;position:relative}
+.cta h2{font-size:clamp(32px,3.8vw,48px);color:#fff}
+.cta p{color:#dcebff;margin-top:12px;font-size:17px;max-width:52ch}
+.cta .actions{display:flex;gap:12px;flex-wrap:wrap}
+@media(max-width:800px){.cta .wrap{grid-template-columns:1fr}}
+.footer{background:var(--navy-deep);color:#b9c7e0;font-size:14.5px}
+.footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;padding-block:28px;align-items:center}
+.footer .brand .name{color:#fff}.footer .brand .sub{color:#8fc1ff}
+.footer ul{list-style:none;margin:0;padding:0;display:flex;gap:18px;flex-wrap:wrap}
+.footer a:hover{color:#fff}
+.footer .tv{display:flex;gap:10px;align-items:center;font-size:13px}
+.footer .tv i{display:inline-block;width:8px;height:8px;background:var(--gold);transform:rotate(45deg)}
+
+.wa-float{position:fixed;right:max(16px,env(safe-area-inset-right,0px));bottom:max(16px,env(safe-area-inset-bottom,0px));z-index:70;width:56px;height:56px;border-radius:50%;background:var(--wa);display:grid;place-items:center;box-shadow:0 12px 30px -10px rgba(31,178,87,.9);transition:transform .25s}
+.wa-float:hover{transform:scale(1.08)}
+.wa-float svg{width:28px;height:28px;fill:#fff}
+.concept-bar{position:fixed;left:max(16px,env(safe-area-inset-left,0px));bottom:max(16px,env(safe-area-inset-bottom,0px));z-index:70;background:var(--navy-deep);color:#fff;border:1px solid var(--navy-line);font-size:12.5px;display:flex;align-items:center;gap:10px;padding:8px 10px 8px 14px;box-shadow:0 10px 30px -10px rgba(0,0,0,.5)}
+.concept-bar b{font-weight:600;color:var(--gold)}
+.concept-bar a{background:#fff;color:var(--navy-deep);padding:6px 10px;font-weight:600}
+.concept-bar a:hover{background:var(--blue);color:#fff}
+.concept-bar a:first-child{background:none;color:#fff;padding:0;font-weight:500}
+.concept-bar a:first-child:hover{color:var(--gold)}
+@media(max-width:560px){.concept-bar span.l{display:none}}
+</style>
+</head>
+<body>
+
+<header class="header">
+  <div class="progress" id="progress" aria-hidden="true"></div>
+  <div class="wrap">
+    <a class="brand" href="../" aria-label="Brightwit College home">
+      <img class="mark" src="../../img/brightwit-crest.png" alt="" width="52" height="52">
+      <span><span class="name">Brightwit</span><span class="sub">College of Professional Studies</span></span>
+    </a>
+    <nav class="nav" id="nav" aria-label="Primary">
+      <a href="../#schools">Courses</a>
+      <a href="../#fees">Fees</a>
+      <a href="../#about">About</a>
+      <a href="../#admissions">Admissions</a>
+      <a href="./" class="is-here" aria-current="page">Campus</a>
+      <a href="../#contact">Contact</a>
+      <a class="btn btn-primary" href="../#apply">Apply online</a>
+    </nav>
+    <div class="cta">
+      <a class="btn btn-primary" href="../#apply">Apply online</a>
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="nav"><span></span></button>
+    </div>
+  </div>
+</header>
+
+<main>
+<section class="cover" id="top">
+  <div class="bg" id="coverBg" aria-hidden="true"></div>
+  <div class="shade"></div>
+  <div class="wrap">
+    <div class="copy">
+      <div class="eyebrow">Campus life</div>
+      <h1>Inside <em>Brightwit</em></h1>
+      <p>Kony House, First Floor, Room 103, Zambia Stage, Ngong. The classrooms, the training salon, the bar and the people, school by school. Filmed by the college.</p>
+      <div class="meta" id="coverMeta"><div><b data-count="40">40</b>photos</div><div><b data-count="3">3</b>videos</div><div><b data-count="5">5</b>schools and spaces</div></div>
+    </div>
+    <div class="reel-frame" id="coverMedia">
+      <img class="poster" src="../../video/campus-01.jpg" alt="" width="540" height="960">
+      <video id="coverVideo" src="../../video/cover-loop.mp4" poster="../../video/campus-01.jpg" muted loop playsinline autoplay preload="auto" aria-label="Brightwit College beauty class video"></video>
+      <span class="tag"><span><i></i>Makeup practical</span><span>Room 103</span></span>
+      <img class="crest" src="../../img/brightwit-crest.png" alt="" width="72" height="72">
+    </div>
+  </div>
+  <div class="scroll"><span>SCROLL</span><i></i></div>
+</section>
+
+<nav class="chapters" id="chapters" aria-label="Gallery chapters">
+  <div class="wrap">
+    <a href="#campus" data-ch="campus" class="is-active">Campus <small>6</small></a>
+    <a href="#beauty" data-ch="beauty">Cosmetology &amp; Beauty <small>10</small></a>
+    <a href="#barista" data-ch="barista">Barista &amp; Mixology <small>6</small></a>
+    <a href="#driving" data-ch="driving">Driving School <small>9</small></a>
+    <a href="#languages" data-ch="languages">Languages <small>6</small></a>
+    <a href="#videos" data-ch="videos">Videos <small>3</small></a>
+    <i class="ind" id="chInd"></i>
+  </div>
+</nav>
+
+<section class="chapter" id="campus" data-chapter="campus">
+  <div class="wrap">
+    <div class="chapter-head">
+      <div><div class="eyebrow">The campus</div><h2>Kony House, first floor</h2><p>The college's own photos of the classrooms and the students of 2026. Click any photo to open it full screen.</p></div>
+      <div class="count"><b>01</b> / 06</div>
+    </div>
+    <div class="mosaic" data-lb-group="campus">
+      <a class="tile t-a" href="../../img/campus-class-group-01.jpg" data-lb data-cap="Beauty class, October 2026" data-wipe="left"><img src="../../img/campus-class-group-01.jpg" alt="Brightwit class group photo" width="1280" height="960" loading="lazy" data-px="0.12"><span class="cap"><span>Beauty class, October 2026</span><small>CAMPUS</small></span></a>
+      <a class="tile t-p" href="../../img/campus-classroom-beauty-session.jpg" data-lb data-cap="Beauty therapy session" data-wipe="up"><img src="../../img/campus-classroom-beauty-session.jpg" alt="A beauty class in session" width="960" height="1280" loading="lazy" data-px="0.18"><span class="cap"><span>Beauty therapy session</span><small>CAMPUS</small></span></a>
+      <a class="tile t-q" href="../../img/campus-makeup-practice-desk.jpg" data-lb data-cap="Makeup practical" data-wipe="down"><img src="../../img/campus-makeup-practice-desk.jpg" alt="A student practises makeup at the desk" width="960" height="1280" loading="lazy" data-px="0.22"><span class="cap"><span>Makeup practical</span><small>CAMPUS</small></span></a>
+      <a class="tile t-r" href="../../img/campus-students-duo-portrait.jpg" data-lb data-cap="Brightwit students" data-wipe="right"><img src="../../img/campus-students-duo-portrait.jpg" alt="Two Brightwit students in college T-shirts" width="960" height="1280" loading="lazy" data-px="0.16"><span class="cap"><span>Brightwit students</span><small>CAMPUS</small></span></a>
+      <a class="tile t-b" href="../../img/campus-class-group-02.jpg" data-lb data-cap="Class of 2026" data-wipe="left"><img src="../../img/campus-class-group-02.jpg" alt="Students in white college T-shirts" width="1280" height="960" loading="lazy" data-px="0.1"><span class="cap"><span>Class of 2026</span><small>CAMPUS</small></span></a>
+      <a class="tile t-c" href="../../img/campus-class-group-03.jpg" data-lb data-cap="Trainers and students" data-wipe="up"><img src="../../img/campus-class-group-03.jpg" alt="Students and trainer in the classroom" width="1280" height="960" loading="lazy" data-px="0.14"><span class="cap"><span>Trainers and students</span><small>CAMPUS</small></span></a>
+    </div>
+  </div>
+</section>
+
+<section class="chapter" id="beauty" data-chapter="beauty" style="background:var(--paper-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="wrap">
+    <div class="chapter-head">
+      <div><div class="eyebrow">Cosmetology &amp; Beauty Therapy</div><h2>The training salon</h2><p>Hover or tap a thumbnail to bring it to the stage. The stage drifts slowly on its own; click it to open the photo full screen.</p></div>
+      <div class="count"><b>02</b> / 06</div>
+    </div>
+    <div class="spot" id="spot" data-lb-group="beauty">
+      <div class="stage" id="spotStage" role="img" aria-label="Selected beauty photo">
+        <img class="is-active" src="../../img/beauty-salon-stylist.jpg" alt="" width="1400" height="933" data-cap="Draping a client in the salon">
+        <img src="../../img/beauty-glam-03.jpg" alt="" width="1050" height="1400" loading="lazy" data-cap="Precision makeup">
+        <img src="../../img/beauty-palette-hand.jpg" alt="" width="1050" height="1400" loading="lazy" data-cap="Palette work">
+        <img src="../../img/beauty-eye-closeup.jpg" alt="" width="1050" height="1400" loading="lazy" data-cap="Eye detail">
+        <img src="../../img/beauty-glam-01.jpg" alt="" width="1050" height="1400" loading="lazy" data-cap="Evening glam">
+        <img src="../../img/beauty-glam-02.jpg" alt="" width="1050" height="1400" loading="lazy" data-cap="Nails and makeup">
+        <img src="../../img/beauty-portrait-01.jpg" alt="" width="1050" height="1400" loading="lazy" data-cap="Studio portrait">
+        <img src="../../img/beauty-portrait-02.jpg" alt="" width="1050" height="1400" loading="lazy" data-cap="Finished look">
+        <img src="../../img/beauty-afro-red.jpg" alt="" width="1050" height="1400" loading="lazy" data-cap="Hair and colour">
+        <img src="../../img/beauty-products-flatlay.jpg" alt="" width="1400" height="933" loading="lazy" data-cap="The kit">
+        <span class="cap" id="spotCap">Draping a client in the salon</span>
+        <span class="n" id="spotN">1 / 10</span>
+      </div>
+      <div class="rail" id="spotRail" role="tablist" aria-label="Beauty photos"></div>
+      <p class="note"><i></i>Placeholder imagery until the college's own salon photos are added. Every photo can be replaced from the admin.</p>
+    </div>
+  </div>
+</section>
+
+<section class="chapter coffee-ch" id="barista" data-chapter="barista">
+  <div class="wrap">
+    <div class="chapter-head">
+      <div><div class="eyebrow">Barista &amp; Mixology</div><h2>Behind the bar</h2><p>This chapter scrolls sideways. Keep scrolling and the reel moves with you.</p></div>
+      <div class="count"><b>03</b> / 06</div>
+    </div>
+  </div>
+  <div class="reel" id="reel" data-lb-group="barista">
+    <div class="panel"><a class="tile" href="../../img/barista-latte-pour.jpg" data-lb data-cap="Pouring latte art"><img src="../../img/barista-latte-pour.jpg" alt="Steamed milk poured into a latte" width="1400" height="933" loading="lazy"><span class="cap"><span>Pouring latte art</span><small>BARISTA</small></span></a><p class="line">Milk texturing and latte art, repeated until the rosetta holds.<small>Barista Training, 6 weeks</small></p></div>
+    <div class="panel tall"><a class="tile" href="../../img/barista-latte-hand.jpg" data-lb data-cap="A finished latte"><img src="../../img/barista-latte-hand.jpg" alt="Latte art held in a cup" width="1050" height="1400" loading="lazy"><span class="cap"><span>A finished latte</span><small>BARISTA</small></span></a></div>
+    <div class="panel"><a class="tile" href="../../img/barista-pour-dark.jpg" data-lb data-cap="Service practice"><img src="../../img/barista-pour-dark.jpg" alt="A barista in a dark apron pouring" width="1400" height="933" loading="lazy"><span class="cap"><span>Service practice</span><small>BARISTA</small></span></a><p class="line">Espresso, grind, dose and extraction on commercial machines.<small>Combined Barista and Mixology, 3 months</small></p></div>
+    <div class="panel quote"><p class="line">"From espresso basics to latte art, everything was hands-on."<small>Amina H., Barista &amp; Mixology</small></p></div>
+    <div class="panel tall"><a class="tile" href="../../img/barista-cup-table.jpg" data-lb data-cap="Cappuccino service"><img src="../../img/barista-cup-table.jpg" alt="A cappuccino on a table" width="1050" height="1400" loading="lazy"><span class="cap"><span>Cappuccino service</span><small>BARISTA</small></span></a></div>
+    <div class="panel"><a class="tile" href="../../img/barista-cup-hold.jpg" data-lb data-cap="Ready to serve"><img src="../../img/barista-cup-hold.jpg" alt="A barista holding a cappuccino" width="1400" height="933" loading="lazy"><span class="cap"><span>Ready to serve</span><small>BARISTA</small></span></a><p class="line">Cocktail preparation, mixology and beverage service.<small>Mixology Training, 6 weeks</small></p></div>
+    <div class="panel"><a class="tile" href="../../img/barista-cup-white.jpg" data-lb data-cap="Espresso bar"><img src="../../img/barista-cup-white.jpg" alt="Coffee in a white cup" width="1400" height="933" loading="lazy"><span class="cap"><span>Espresso bar</span><small>BARISTA</small></span></a><p class="line">Graduates work in cafés, hotels and specialty coffee shops.<small>Attachment opportunities for eligible programmes</small></p></div>
+  </div>
+</section>
+
+<section class="chapter" id="driving" data-chapter="driving">
+  <div class="wrap">
+    <div class="chapter-head">
+      <div><div class="eyebrow">Brightwit Driving School</div><h2>Safety on wheels</h2><p>Two lanes that move at different speeds as you scroll. B1 automatic and A1 courses, full or half, and refresher lessons.</p></div>
+      <div class="count"><b>04</b> / 06</div>
+    </div>
+    <div class="lanes" data-lb-group="driving">
+      <div class="lane a" data-lane="-0.08">
+        <a class="tile p" href="../../img/driving-woman-window.jpg" data-lb data-cap="Learner at the window"><img src="../../img/driving-woman-window.jpg" alt="A smiling learner driver at the car window" width="1050" height="1400" loading="lazy"><span class="cap"><span>Learner at the window</span><small>DRIVING</small></span></a>
+        <a class="tile" href="../../img/driving-man-sunny.jpg" data-lb data-cap="On the road"><img src="../../img/driving-man-sunny.jpg" alt="A man driving on a sunny day" width="1400" height="933" loading="lazy"><span class="cap"><span>On the road</span><small>DRIVING</small></span></a>
+        <div class="sign"><small>Brightwit Driving School</small>Road safety, traffic regulations and responsible driving, in the college's own cars.</div>
+        <a class="tile p" href="../../img/driving-man-steering.jpg" data-lb data-cap="Steering practice"><img src="../../img/driving-man-steering.jpg" alt="A learner at the steering wheel" width="1050" height="1400" loading="lazy"><span class="cap"><span>Steering practice</span><small>DRIVING</small></span></a>
+        <a class="tile p" href="../../img/driving-man-silver-car.jpg" data-lb data-cap="Learner driver"><img src="../../img/driving-man-silver-car.jpg" alt="A learner beside a silver car" width="1050" height="1400" loading="lazy"><span class="cap"><span>Learner driver</span><small>DRIVING</small></span></a>
+        <a class="tile" href="../../img/driving-man-red-car.jpg" data-lb data-cap="Lesson day"><img src="../../img/driving-man-red-car.jpg" alt="A learner beside a red car" width="1400" height="933" loading="lazy"><span class="cap"><span>Lesson day</span><small>DRIVING</small></span></a>
+      </div>
+      <div class="lane b" data-lane="0.1">
+        <a class="tile" href="../../img/driving-hand-wheel.jpg" data-lb data-cap="Hands on the wheel"><img src="../../img/driving-hand-wheel.jpg" alt="Hands on a steering wheel" width="1400" height="933" loading="lazy"><span class="cap"><span>Hands on the wheel</span><small>DRIVING</small></span></a>
+        <a class="tile p" href="../../img/driving-woman-smile.jpg" data-lb data-cap="Licence day"><img src="../../img/driving-woman-smile.jpg" alt="A smiling woman driver" width="1050" height="1400" loading="lazy"><span class="cap"><span>Licence day</span><small>DRIVING</small></span></a>
+        <a class="tile" href="../../img/driving-man-shirt.jpg" data-lb data-cap="Defensive driving"><img src="../../img/driving-man-shirt.jpg" alt="A man in a white shirt driving" width="1400" height="933" loading="lazy"><span class="cap"><span>Defensive driving</span><small>DRIVING</small></span></a>
+        <a class="tile p" href="../../img/driving-woman-car.jpg" data-lb data-cap="Ready for the test"><img src="../../img/driving-woman-car.jpg" alt="A woman beside a black car" width="1050" height="1400" loading="lazy"><span class="cap"><span>Ready for the test</span><small>DRIVING</small></span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="chapter" id="languages" data-chapter="languages" style="background:var(--paper-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="wrap">
+    <div class="chapter-head">
+      <div><div class="eyebrow">German &amp; French</div><h2>A language for the next opportunity</h2><p>Move the mouse over a card and it tilts toward you. German A1 to B2, and French, for study, work and travel.</p></div>
+      <div class="count"><b>05</b> / 06</div>
+    </div>
+    <div class="tilts" data-lb-group="languages">
+      <a class="tile t-p1" href="../../img/student-woman-cafe.jpg" data-lb data-cap="Study session" data-tilt><img src="../../img/student-woman-cafe.jpg" alt="A student studying in a café" width="1050" height="1400" loading="lazy"><span class="glare"></span><span class="cap"><span>Study session</span><small>LANGUAGES</small></span></a>
+      <a class="tile t-l1" href="../../img/students-laptop-team.jpg" data-lb data-cap="Group work" data-tilt><img src="../../img/students-laptop-team.jpg" alt="Students studying together with laptops" width="1400" height="933" loading="lazy"><span class="glare"></span><span class="cap"><span>Group work</span><small>LANGUAGES</small></span></a>
+      <a class="tile t-l2" href="../../img/students-steps-laptops.jpg" data-lb data-cap="Between classes" data-tilt><img src="../../img/students-steps-laptops.jpg" alt="A study group on the steps" width="1400" height="933" loading="lazy"><span class="glare"></span><span class="cap"><span>Between classes</span><small>LANGUAGES</small></span></a>
+      <a class="tile t-l3" href="../../img/nairobi-nbo.jpg" data-lb data-cap="Next stop, abroad" data-tilt><img src="../../img/nairobi-nbo.jpg" alt="Nairobi airport" width="1400" height="933" loading="lazy"><span class="glare"></span><span class="cap"><span>Next stop, abroad</span><small>LANGUAGES</small></span></a>
+      <a class="tile t-p2" href="../../img/student-man-laptop.jpg" data-lb data-cap="Free computer basics" data-tilt><img src="../../img/student-man-laptop.jpg" alt="A student working on a laptop" width="1050" height="1400" loading="lazy"><span class="glare"></span><span class="cap"><span>Free computer basics</span><small>LANGUAGES</small></span></a>
+      <a class="tile t-l4" href="../../img/nairobi-skyline.jpg" data-lb data-cap="Nairobi" data-tilt><img src="../../img/nairobi-skyline.jpg" alt="The Nairobi skyline" width="1400" height="933" loading="lazy"><span class="glare"></span><span class="cap"><span>Nairobi</span><small>LANGUAGES</small></span></a>
+    </div>
+  </div>
+</section>
+
+<section class="chapter" id="videos" data-chapter="videos">
+  <div class="wrap">
+    <div class="chapter-head">
+      <div><div class="eyebrow">Videos</div><h2>The campus in motion</h2><p>Filmed on a phone by the college. Hover a reel to preview it silently, click to watch it with sound.</p></div>
+      <div class="count"><b>06</b> / 06</div>
+    </div>
+    <div class="videos" data-lb-group="videos">
+      <a class="vcard" href="../../video/campus-01.mp4" data-lb data-video data-cap="Makeup practical in the training salon"><img src="../../video/campus-01.jpg" alt="" width="540" height="960" loading="lazy"><video src="../../video/campus-01.mp4" muted loop playsinline preload="none"></video><span class="play"><svg viewBox="0 0 24 24"><path d="M7 4l13 8-13 8z"/></svg></span><span class="cap"><span><b>Makeup practical</b><span>Cosmetology &amp; Beauty Therapy</span></span><em>1:30</em></span></a>
+      <a class="vcard" href="../../video/campus-02.mp4" data-lb data-video data-cap="Nail technology class"><img src="../../video/campus-02.jpg" alt="" width="540" height="960" loading="lazy"><video src="../../video/campus-02.mp4" muted loop playsinline preload="none"></video><span class="play"><svg viewBox="0 0 24 24"><path d="M7 4l13 8-13 8z"/></svg></span><span class="cap"><span><b>Nail technology</b><span>Cosmetology &amp; Beauty Therapy</span></span><em>0:27</em></span></a>
+      <a class="vcard" href="../../video/campus-04.mp4" data-lb data-video data-cap="The bar and the classrooms"><img src="../../video/campus-04.jpg" alt="" width="540" height="960" loading="lazy"><video src="../../video/campus-04.mp4" muted loop playsinline preload="none"></video><span class="play"><svg viewBox="0 0 24 24"><path d="M7 4l13 8-13 8z"/></svg></span><span class="cap"><span><b>The bar and the classrooms</b><span>Barista &amp; Mixology, campus</span></span><em>0:17</em></span></a>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="bg" id="ctaBg" aria-hidden="true"></div>
+  <div class="wrap">
+    <div><h2>Come and see it for yourself</h2><p>Open Day on 15 November 2026 at Kony House. Or apply online now for the January 2027 intake.</p></div>
+    <div class="actions"><a class="btn btn-light" href="../#apply">Apply online</a><a class="btn btn-light" href="../#fees">Courses &amp; fees</a></div>
+  </div>
+</section>
+</main>
+
+<footer class="footer" id="contact">
+  <div class="wrap">
+    <div class="brand"><img class="mark" src="../../img/brightwit-crest.png" alt="" width="52" height="52"><span><span class="name">Brightwit</span><span class="sub">College of Professional Studies</span></span></div>
+    <ul><li><a href="../">Home</a></li><li><a href="../#schools">Courses</a></li><li><a href="../#fees">Fees</a></li><li><a href="../#apply">Apply online</a></li><li><a href="tel:+254758495577">+254 758 495577</a></li></ul>
+    <span class="tv"><i></i>© 2026 Brightwit College of Professional Studies</span>
+  </div>
+</footer>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Photo viewer" hidden>
+  <div class="shade" id="lbShade"></div>
+  <div class="bar"><div class="where"><b id="lbN">1 / 6</b><span id="lbGroup">Campus</span></div><button type="button" id="lbClose" aria-label="Close"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>
+  <button type="button" class="prev" id="lbPrev" aria-label="Previous"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg></button>
+  <div class="media" id="lbMedia"></div>
+  <button type="button" class="next" id="lbNext" aria-label="Next"><svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></button>
+  <div class="caption"><div><small id="lbTag">CAMPUS</small><div id="lbCap"></div></div><div class="keys"><span><kbd>←</kbd> <kbd>→</kbd> browse</span><span><kbd>Esc</kbd> close</span><span>click photo to zoom</span></div></div>
+</div>
+<div class="cursor" id="cursor" aria-hidden="true">VIEW</div>
+
+<a class="wa-float" href="https://wa.me/254758495577?text=Hello%20Brightwit%20College%2C%20I%20would%20like%20to%20enquire%20about%20your%20courses." target="_blank" rel="noopener" aria-label="Chat with Brightwit College on WhatsApp"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.2-.6.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.8-1.4.1-.2 0-.3 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1.1 2.7c.1.2 1.9 2.9 4.6 4 1.7.7 2.4.8 3.2.7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.5-.3z"/></svg></a>
+<nav class="concept-bar" aria-label="Design concepts"><a href="../../">All concepts</a><b>Gallery</b><span class="l">Brand edition</span><a href="../">Homepage</a></nav>
+
+<script>
+(function(){
+  var btn=document.getElementById('menuBtn'),nav=document.getElementById('nav');
+  btn.addEventListener('click',function(){var open=nav.classList.toggle('open');btn.setAttribute('aria-expanded',open?'true':'false');});
+
+  var cv=document.getElementById('coverVideo');
+  cv.addEventListener('error',function(){cv.style.display='none';});
+
+  /* beauty spotlight */
+  var stage=document.getElementById('spotStage'),imgs=Array.prototype.slice.call(stage.querySelectorAll('img')),rail=document.getElementById('spotRail'),cap=document.getElementById('spotCap'),n=document.getElementById('spotN'),cur=0,timer;
+  imgs.forEach(function(im,i){var b=document.createElement('button');b.type='button';b.setAttribute('role','tab');b.setAttribute('aria-label',im.getAttribute('data-cap'));b.innerHTML='<img src="'+im.getAttribute('src')+'" alt="" width="200" height="200" loading="lazy">';if(!i)b.classList.add('is-active');b.addEventListener('pointerenter',function(e){if(e.pointerType==='mouse')show(i,true);});b.addEventListener('click',function(){show(i,true);});b.addEventListener('focus',function(){show(i,true);});rail.appendChild(b);});
+  function show(i,manual){imgs[cur].classList.remove('is-active');cur=(i+imgs.length)%imgs.length;imgs[cur].classList.add('is-active');cap.textContent=imgs[cur].getAttribute('data-cap');n.textContent=(cur+1)+' / '+imgs.length;Array.prototype.forEach.call(rail.children,function(b,k){b.classList.toggle('is-active',k===cur);b.setAttribute('aria-selected',k===cur?'true':'false');});if(manual)auto();}
+  function auto(){clearInterval(timer);if(window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;timer=setInterval(function(){show(cur+1);},6000);}
+  auto();
+  stage.addEventListener('click',function(){openLb(imgs.map(function(im){return {src:im.getAttribute('src'),cap:im.getAttribute('data-cap'),el:im};}),cur,'Cosmetology & Beauty Therapy','BEAUTY',stage);});
+
+  /* video cards: silent preview on hover */
+  Array.prototype.forEach.call(document.querySelectorAll('.vcard'),function(c){var v=c.querySelector('video');c.addEventListener('pointerenter',function(e){if(e.pointerType!=='mouse')return;c.classList.add('is-previewing');v.play().catch(function(){});});c.addEventListener('pointerleave',function(){c.classList.remove('is-previewing');v.pause();});v.addEventListener('error',function(){v.remove();});});
+
+  /* lightbox */
+  var lb=document.getElementById('lb'),media=document.getElementById('lbMedia'),lbN=document.getElementById('lbN'),lbG=document.getElementById('lbGroup'),lbCap=document.getElementById('lbCap'),lbTag=document.getElementById('lbTag');
+  var items=[],idx=0,lastFocus=null,originEl=null;
+  var GROUPS={campus:['The campus','CAMPUS'],beauty:['Cosmetology & Beauty Therapy','BEAUTY'],barista:['Barista & Mixology','BARISTA'],driving:['Brightwit Driving School','DRIVING'],languages:['German & French','LANGUAGES'],videos:['Videos','VIDEO']};
+  document.addEventListener('click',function(e){
+    var a=e.target.closest('[data-lb]');if(!a)return;e.preventDefault();
+    var grp=a.closest('[data-lb-group]'),key=grp?grp.getAttribute('data-lb-group'):'campus';
+    var list=Array.prototype.slice.call((grp||document).querySelectorAll('[data-lb]')).map(function(x){return {src:x.getAttribute('href'),cap:x.getAttribute('data-cap'),video:x.hasAttribute('data-video'),el:x.querySelector('img')};});
+    openLb(list,list.findIndex(function(it){return it.src===a.getAttribute('href');}),GROUPS[key][0],GROUPS[key][1],a.querySelector('img'));
+  });
+  function openLb(list,i,gname,tag,fromEl){
+    items=list;lastFocus=document.activeElement;lbG.textContent=gname;lbTag.textContent=tag;
+    lb.hidden=false;lb.classList.add('is-open');document.body.style.overflow='hidden';
+    if(window.BW&&BW.lenis)BW.lenis.stop();
+    render(i,fromEl);
+    document.getElementById('lbClose').focus();
+  }
+  function render(i,fromEl){
+    idx=(i+items.length)%items.length;var it=items[idx];
+    media.innerHTML='';lbN.textContent=(idx+1)+' / '+items.length;lbCap.textContent=it.cap||'';
+    if(it.video){var v=document.createElement('video');v.src=it.src;v.controls=true;v.autoplay=true;v.playsInline=true;media.appendChild(v);return;}
+    var im=document.createElement('img');im.src=it.src;im.alt=it.cap||'';media.appendChild(im);
+    im.addEventListener('click',function(){im.classList.toggle('is-zoomed');if(window.gsap)gsap.to(im,{scale:im.classList.contains('is-zoomed')?1.8:1,duration:.5,ease:'power3.out'});});
+    if(window.gsap&&!BW.reduced){
+      if(fromEl){var r=fromEl.getBoundingClientRect(),fly=fromEl.cloneNode();fly.className='fly';fly.style.cssText='left:'+r.left+'px;top:'+r.top+'px;width:'+r.width+'px;height:'+r.height+'px';lb.appendChild(fly);gsap.set(im,{opacity:0});
+        gsap.fromTo(lb.querySelector('.shade'),{opacity:0},{opacity:1,duration:.4});
+        requestAnimationFrame(function(){var t=im.getBoundingClientRect();gsap.to(fly,{left:t.left,top:t.top,width:t.width,height:t.height,duration:.55,ease:'power3.inOut',onComplete:function(){gsap.set(im,{opacity:1});fly.remove();}});});
+      } else {gsap.fromTo(im,{opacity:0,scale:.96},{opacity:1,scale:1,duration:.45,ease:'power3.out'});}
+    }
+  }
+  function closeLb(){
+    lb.classList.remove('is-open');lb.hidden=true;media.innerHTML='';document.body.style.overflow='';
+    if(window.BW&&BW.lenis)BW.lenis.start();
+    if(lastFocus&&lastFocus.focus)lastFocus.focus({preventScroll:true});
+  }
+  document.getElementById('lbClose').addEventListener('click',closeLb);
+  document.getElementById('lbShade').addEventListener('click',closeLb);
+  document.getElementById('lbPrev').addEventListener('click',function(){slide(-1);});
+  document.getElementById('lbNext').addEventListener('click',function(){slide(1);});
+  function slide(d){if(window.gsap&&!BW.reduced&&media.firstChild&&media.firstChild.tagName==='IMG'){gsap.to(media.firstChild,{x:-40*d,opacity:0,duration:.22,ease:'power2.in',onComplete:function(){render(idx+d);gsap.fromTo(media.firstChild,{x:40*d,opacity:0},{x:0,opacity:1,duration:.35,ease:'power3.out'});}});}else render(idx+d);}
+  document.addEventListener('keydown',function(e){if(lb.hidden)return;if(e.key==='Escape')closeLb();if(e.key==='ArrowRight')slide(1);if(e.key==='ArrowLeft')slide(-1);});
+  var sx=0,sy=0;lb.addEventListener('touchstart',function(e){sx=e.touches[0].clientX;sy=e.touches[0].clientY;},{passive:true});
+  lb.addEventListener('touchend',function(e){var dx=e.changedTouches[0].clientX-sx,dy=e.changedTouches[0].clientY-sy;if(Math.abs(dx)>60&&Math.abs(dy)<80)slide(dx<0?1:-1);else if(dy>90&&Math.abs(dx)<60)closeLb();});
+
+  /* cursor label */
+  var cur_=document.getElementById('cursor');
+  if(window.matchMedia('(pointer: fine)').matches){
+    document.addEventListener('pointermove',function(e){cur_.style.transform='translate('+(e.clientX)+'px,'+(e.clientY)+'px) translate(-50%,-50%) scale('+(cur_.classList.contains('is-on')?1:0)+')';});
+    document.addEventListener('pointerover',function(e){var t=e.target.closest('[data-lb], #spotStage');cur_.classList.toggle('is-on',!!t);cur_.classList.toggle('coffee',!!(t&&t.closest('.coffee-ch')));cur_.textContent=t&&t.hasAttribute('data-video')?'PLAY':'VIEW';});
+  }
+})();
+</script>
+<script src="../../js/gsap.min.js"></script>
+<script src="../../js/ScrollTrigger.min.js"></script>
+<script src="../../js/lenis.min.js"></script>
+<script src="../../js/motion.js"></script>
+<script>
+(function(){
+  BW.init({smooth:true,lerp:.1,anchorOffset:130});
+  BW.header(document.querySelector('.header'),{hide:false,at:40});
+  BW.progress(document.getElementById('progress'));
+  BW.tilt('.tilts [data-tilt]',7);
+
+  /* chapter nav indicator */
+  var links=BW.$('#chapters a'),ind=document.getElementById('chInd'),wrap=document.querySelector('#chapters .wrap');
+  function mark(key){links.forEach(function(a){var on=a.getAttribute('data-ch')===key;a.classList.toggle('is-active',on);if(on){ind.classList.toggle('coffee',key==='barista');var r=a.getBoundingClientRect(),w=wrap.getBoundingClientRect();if(BW.reduced){ind.style.left=(r.left-w.left+wrap.scrollLeft)+'px';ind.style.width=r.width+'px';}else gsap.to(ind,{left:r.left-w.left+wrap.scrollLeft,width:r.width,duration:.45,ease:'power3.out'});a.scrollIntoView({block:'nearest',inline:'nearest',behavior:'smooth'});}});}
+  BW.$('[data-chapter]').forEach(function(s){ScrollTrigger.create({trigger:s,start:'top 45%',end:'bottom 45%',onEnter:function(){mark(s.getAttribute('data-chapter'));},onEnterBack:function(){mark(s.getAttribute('data-chapter'));}});});
+  mark('campus');
+  window.addEventListener('resize',function(){var a=document.querySelector('#chapters a.is-active');if(a)mark(a.getAttribute('data-ch'));});
+
+  if(BW.reduced)return;
+
+  /* cover: the video shrinks into a frame and the title drifts as you scroll */
+  var ctl=BW.intro();
+  var words=BW.splitWords(document.querySelector('.cover h1'));
+  gsap.set('.cover .eyebrow,.cover p,.cover .meta',{opacity:0,y:14});
+  ctl.from(words,{yPercent:110,duration:1,stagger:.08},.2).to('.cover .eyebrow',{opacity:1,y:0,duration:.6},.1).to('.cover p,.cover .meta',{opacity:1,y:0,duration:.7,stagger:.12},.7);
+  gsap.set('#coverMedia',{clipPath:'inset(12% 12% 12% 12%)',scale:.92});
+  ctl.to('#coverMedia',{clipPath:'inset(0% 0% 0% 0%)',scale:1,duration:1.1,ease:'power3.inOut'},.3);
+  gsap.to('#coverMedia',{yPercent:-12,rotation:-2,ease:'none',scrollTrigger:{trigger:'.cover',start:'top top',end:'bottom top',scrub:true}});
+  gsap.to('#coverBg',{yPercent:10,ease:'none',scrollTrigger:{trigger:'.cover',start:'top top',end:'bottom top',scrub:true}});
+  gsap.to('.cover .copy',{yPercent:20,opacity:0,ease:'none',scrollTrigger:{trigger:'.cover',start:'top top',end:'80% top',scrub:true}});
+  BW.counters('#coverMeta b');
+
+  /* chapter headings rise word by word */
+  BW.$('.chapter-head h2').forEach(function(h){var w=BW.splitWords(h);gsap.from(w,{yPercent:110,stagger:.05,duration:.8,ease:'power3.out',scrollTrigger:{trigger:h,start:'top 88%',once:true}});});
+  BW.$('.chapter-head .count').forEach(function(c){gsap.from(c,{x:30,opacity:0,duration:.8,scrollTrigger:{trigger:c,start:'top 90%',once:true}});});
+
+  /* 1. mosaic: wipe in from alternating sides, then parallax inside each frame */
+  BW.wipe('.mosaic .tile');
+  BW.$('.mosaic .tile img').forEach(function(im){var f=parseFloat(im.getAttribute('data-px')||'.12');gsap.fromTo(im,{yPercent:-f*40},{yPercent:f*40,ease:'none',scrollTrigger:{trigger:im.parentElement,start:'top bottom',end:'bottom top',scrub:true}});});
+
+  /* 2. spotlight: stage reveals with a circle, thumbnails pop in */
+  BW.wipe('#spotStage','circle');
+  gsap.from('#spotRail button',{scale:.6,opacity:0,stagger:{each:.05,from:'start'},duration:.6,ease:'back.out(1.6)',scrollTrigger:{trigger:'#spotRail',start:'top 85%',once:true}});
+
+  /* 3. barista reel: pinned horizontal scroll on desktop */
+  BW.horizontal(document.getElementById('barista'),document.getElementById('reel'));
+  gsap.from('.reel .panel',{x:80,opacity:0,stagger:.08,duration:.8,scrollTrigger:{trigger:'#barista',start:'top 70%',once:true}});
+
+  /* 4. driving lanes: scrub each lane at its own speed, tiles slide in from their side */
+  BW.$('.lane').forEach(function(l){var f=parseFloat(l.getAttribute('data-lane'));gsap.fromTo(l,{yPercent:-f*60},{yPercent:f*60,ease:'none',scrollTrigger:{trigger:'.lanes',start:'top bottom',end:'bottom top',scrub:.5}});});
+  BW.reveal('.lane.a .tile, .lane.a .sign',{x:-40,opacity:0},{stagger:.1});
+  BW.reveal('.lane.b .tile',{x:40,opacity:0},{stagger:.1});
+
+  /* 5. languages: cards flip up into place */
+  gsap.from('.tilts .tile',{rotationX:-18,y:40,opacity:0,transformPerspective:900,transformOrigin:'50% 100%',stagger:.08,duration:.9,ease:'power3.out',scrollTrigger:{trigger:'.tilts',start:'top 80%',once:true},clearProps:'rotationX,transformPerspective'});
+
+  /* 6. videos: clip reveal from the centre */
+  gsap.from('.vcard',{clipPath:'inset(30% 30% 30% 30%)',opacity:0,stagger:.12,duration:1,ease:'power3.inOut',scrollTrigger:{trigger:'.videos',start:'top 80%',once:true},clearProps:'clipPath'});
+
+  /* CTA background pans with the scroll */
+  gsap.fromTo('#ctaBg',{yPercent:-8},{yPercent:8,ease:'none',scrollTrigger:{trigger:'.cta',start:'top bottom',end:'bottom top',scrub:true}});
+  BW.magnetic('.cta .btn',0.2);
+})();
+</script>
+</body>
+</html>
